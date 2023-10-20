@@ -1,0 +1,39 @@
+[
+  {
+    "op": "add",
+    "path": "/metadata/annotations/traefik.ingress.kubernetes.io~1router.tls",
+    "value": "true"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/rules/0/host",
+    "value": "stage.braincore.app"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/rules/0/http/paths/0/backend/service/name",
+    "value": "stage-evvo-elia-backend"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/rules/0/http/paths/1/backend/service/name",
+    "value": "stage-evvo-elia-backend"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/rules/0/http/paths/2/backend/service/name",
+    "value": "stage-evvo-elia-backend"
+  },
+  {
+    "op": "add",
+    "path": "/spec/tls",
+    "value": [
+      {
+        "secretName": "elia-stage-evvo-certificates",
+        "hosts": [
+          "stage.braincore.app"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "required":               "Ce champ est requis.",
+  "invalidEmail":           "Ce n'est pas un e-mail valide.",
+  "invalidLengthUsername":  "Le nom d'utilisateur doit comprendre entre 3 et 20 caractères.",
+  "invalidLengthPassword":  "Le mot de passe doit comprendre entre 6 et 40 caractères.",
+  "invalidLength3to20": "Doit contenir entre 3 et 20 caractères",
+  "invalidLength3to200": "Doit contenir entre 3 et 200 caractères"
+}

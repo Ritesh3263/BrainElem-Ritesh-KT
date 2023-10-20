@@ -1,0 +1,40 @@
+kind: DaemonSet
+apiVersion: apps/v1
+metadata:
+  name: elia-proxy
+spec:
+  selector:
+    matchLabels:
+      app: elia-proxy
+  template:
+    metadata:
+      labels:
+        app: elia-proxy 
+    spec:
+      serviceAccountName: traefik-ingress-controller
+      containers:
+      - image: elia-proxy
+        name: elia-proxy
+        ports:
+        - name: web
+          containerPort: 80
+          hostPort: 80
+        - name: dashboard
+          containerPort: 8080
+          hostPort: 8080
+        args:
+        # Enable the dashboard without requiring a password. Not recommended for production.
+        - --api.dashboard
+        - --api.insecure
+        - --accesslog
+        - --log.level=debug
+        - --entrypoints.web.Address=:80
+        - --entrypoints.websecure.Address=:443
+        - --providers.kubernetesingress
+        - --providers.kubernetesCRD.namespaces=local
+        #- --certificatesresolvers.myresolver.acme.tlschallenge
+        #- --certificatesresolvers.myresolver.acme.email=adrihanu@gmail.com
+        #- --certificatesresolvers.myresolver.acme.storage=acme.json
+        # Please note that this is the staging Let's Encrypt server.
+        # Once you get things working, you should remove that whole line altogether.
+        #- --certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory

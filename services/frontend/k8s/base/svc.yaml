@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: elia-frontend
+spec:
+  type: ClusterIP
+  selector:
+    app: elia-frontend
+  ports:
+    - port: 80
+      targetPort: 80

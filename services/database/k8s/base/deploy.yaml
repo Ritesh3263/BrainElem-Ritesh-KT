@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elia-database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elia-database
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      volumes:
+      - name: database-pv-storage
+        persistentVolumeClaim:
+          claimName: database-pv-claim
+      containers:
+        - image: elia-database
+          name: elia-database
+          volumeMounts:
+          - mountPath: "/data/db"
+            name: database-pv-storage
+          envFrom:
+            - configMapRef:
+                name: elia-database
+            - secretRef:
+                name: elia-main-secret
+          resources: {}
+          livenessProbe:
+            exec:
+              command:
+              - bash
+              - "-c"
+              - |
+                mongo -u $MONGO_INITDB_ROOT_USERNAME -p $MONGO_INITDB_ROOT_PASSWORD --eval db.adminCommand\(\"ping\"\)
+            failureThreshold: 2
+            periodSeconds: 60
+            timeoutSeconds: 5
+          startupProbe:
+            exec:
+              command:
+              - bash
+              - "-c"
+              - |
+                mongo -u $MONGO_INITDB_ROOT_USERNAME -p $MONGO_INITDB_ROOT_PASSWORD --eval db.adminCommand\(\"ping\"\)
+            failureThreshold: 3
+            periodSeconds: 15
+            timeoutSeconds: 5
+      restartPolicy: Always

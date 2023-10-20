@@ -1,0 +1,164 @@
+apiVersion: skaffold/v2beta17
+kind: Config
+
+deploy:
+  kustomize:
+    paths:
+    - k8s/base
+
+profiles:
+  - name: local
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: development
+              REACT_APP_SITE_TITLE: "Local - BrainCore App"
+          sync:
+            manual:  
+              - src: 'src/**'
+                dest: src
+                strip: 'src'
+              - src: 'public/**'
+                dest: public
+                strip: 'public'
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/local
+  - name: test
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: development
+              REACT_APP_SITE_TITLE: "Test - BrainCore App"
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/test
+  - name: dev
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: development
+              REACT_APP_SITE_TITLE: "Dev - BrainCore App"
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/dev
+  - name: stage-evvo
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: production
+              REACT_APP_SITE_TITLE: "Stage - BrainCore App"
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/stage-evvo
+  - name: local-dev-evvo
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: development
+              REACT_APP_SITE_TITLE: "Dev- BrainCore App"
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/local-dev-evvo
+  - name: demo
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: development
+              REACT_APP_SITE_TITLE: "Demo - BrainCore App"
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/demo
+  - name: stage
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: production
+              REACT_APP_SITE_TITLE: "Stage - BrainCore App"
+              REACT_APP_PAYPAL_CLIENT_ID: AZtJxslfO8yZTw_tMvFPq-yfHSa8LP4gw9QR05YziSwwWBDfbnxH0XvENIq1msxKqroVk_ZVwyoC5aMJ
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/stage
+  - name: prod-ch
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: production
+              REACT_APP_SITE_ROBOTS: nofollow
+              REACT_APP_SITE_TITLE: "BrainCore - Switzerland"
+              REACT_APP_PAYPAL_CLIENT_ID: paypal-client-id-for-prod-ch
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/prod/ch
+  - name: prod-fr
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: production
+              REACT_APP_SITE_ROBOTS: nofollow
+              REACT_APP_SITE_TITLE: "BrainCore - France"
+              REACT_APP_PAYPAL_CLIENT_ID: paypal-client-id-for-prod-fr
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/prod/fr
+  - name: prod-evvo
+    build:
+      artifacts:
+        - image: elia-frontend
+          docker:
+            buildArgs:
+              FRONTEND_ENV: production
+              REACT_APP_SITE_ROBOTS: nofollow
+              REACT_APP_SITE_TITLE: "BrainCore App"
+              REACT_APP_PAYPAL_CLIENT_ID: paypal-client-id-for-prod-evvo
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/prod/evvo

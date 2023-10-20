@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-search-engine-interface
+data:
+  ELASTICSEARCH_URL: stage-evvo-elia-search-engine.stage-evvo.svc.cluster.local:9200
+  ELASTICSEARCH_HOSTS: http://stage-evvo-elia-search-engine.stage-evvo.svc.cluster.local:9200

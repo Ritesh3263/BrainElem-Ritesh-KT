@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-database-interface
+data:
+  ME_CONFIG_BASICAUTH_USERNAME: root
+  ME_CONFIG_MONGODB_AUTH_DATABASE: elia
+  ME_CONFIG_MONGODB_AUTH_USERNAME: elia
+  ME_CONFIG_MONGODB_ENABLE_ADMIN: "false"
+  ME_CONFIG_MONGODB_SERVER: local-elia-database.local.svc.cluster.local

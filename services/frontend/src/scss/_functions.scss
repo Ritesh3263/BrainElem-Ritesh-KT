@@ -1,0 +1,25 @@
+@function vw-xxl($target) {
+  $vw-context: ($screen-xxl * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+  // @return $target;
+}
+
+@function vw-xl($target) {
+  $vw-context: ($screen-xl * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function vw-lg($target) {
+  $vw-context: ($screen-lg * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function vw-md($target) {
+  $vw-context: ($screen-md * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function vw-sm($target) {
+  $vw-context: ($screen-sm * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}

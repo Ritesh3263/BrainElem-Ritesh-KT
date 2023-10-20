@@ -1,0 +1,21 @@
+{
+    "BRAINCORE_TEST_REGISTRATION": "BrainCore Test",
+    "REGISTER": "Zarejestruj",
+    "STATUS": "Status",
+    "STATUS_NOT_INVITED": "Nie zaproszono",
+    "STATUS_REQUEST_SENT": "Zaproszono",
+    "STATUS_NOT_COMPLETED": "Nie ukończono",
+    "STATUS_COMPLETED": "Ukończono",
+    "SEND REQUEST": "Wyślij zaproszenie",
+    "SEND AGAIN": "Wyślij ponownie",
+    "NO RESULTS": "Brak wyników",
+    "COULD NOT DOWNLAD RESULTS": "Nie udało się pobrać wyników",
+    "2022 LONG REPORT DESCRIPTION": "Długa wersja (wszystkie strony) raportu z 2022 roku",
+    "2020 LONG REPORT DESCRIPTION": "Długa wersja (wszystkie strony) raportu z 2020 roku - wygenerowana przez starą platformę BrainCore",
+    "2019 LONG REPORT DESCRIPTION": "Długa wersja (wszystkie strony) raportu z 2019 roku - wygenerowana przez starą platformę BrainCore",
+    "2019 SHORT REPORT DESCRIPTION": "Krótka wersja (pierwsza strona) raportu z 2019 roku - wygenerowana przez starą platformę BrainCore",
+    "USERS_FETCHED": "Pomyślnie pobrano użytkownika/ów.",
+    "REQUEST_SENT": "Pomyślnie wysłano żądanie.",
+    "SELECT_DATE": "Wybierz datę terminu",
+    "INVITE_{{users}}_USERS_FOR_{{type}}_TEST": "Zaproś {{users}} użytkowników na Test BrainCore {{type}}"
+}

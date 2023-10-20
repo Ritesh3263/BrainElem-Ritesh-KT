@@ -1,0 +1,44 @@
+
+.inner-inputField {
+    .MuiFilledInput-root {
+        border: 1px solid var(--PBorderColor);
+        border-radius: 10px 10px 0px 0px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid var(--MedPurple);
+        background-color: var(--PWhite);
+        height: 60px;
+    }
+
+    .Mui-checked {
+        color: var(--NSupText);
+    }
+
+    .MuiInputLabel-animated {
+        color: var(--SBlack);
+        font-size: 14px;
+    }
+}
+
+.viewBbtn {
+    height: 60px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.congnitive-img {
+    width: 100%;
+}
+
+.rightText {
+    padding-left: 30px;
+}
+
+@media (max-width:899px) {
+    .congnitive-img {
+        margin-top: 15px;
+    }
+
+    .rightText {
+        padding-left: 0px;
+    }
+}

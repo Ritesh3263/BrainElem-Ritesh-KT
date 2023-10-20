@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.26 27.76C29.6273 29.6195 28.756 32.0263 28.82 34.5H18.82C18.8659 32.1574 18.0991 29.8712 16.65 28.03C16.41 27.74 16.18 27.45 15.96 27.15L15.5 26.58C13.8543 24.1359 12.9354 21.2753 12.85 18.33C13.0847 15.5849 14.3411 13.0278 16.3705 11.1645C18.4 9.30113 21.0548 8.26723 23.81 8.26723C26.5651 8.26723 29.2199 9.30113 31.2494 11.1645C33.2789 13.0278 34.5352 15.5849 34.77 18.33C34.7043 20.9995 33.9425 23.6055 32.56 25.89C32.3 26.32 32.01 26.73 31.72 27.13L31.26 27.76Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M30.55 34.54H17.11C16.6516 34.54 16.28 34.9116 16.28 35.37V35.91C16.28 36.3684 16.6516 36.74 17.11 36.74H30.55C31.0084 36.74 31.38 36.3684 31.38 35.91V35.37C31.38 34.9116 31.0084 34.54 30.55 34.54Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M29.36 36.74H17.9C17.2538 36.74 16.73 37.2638 16.73 37.91V40.38C16.73 41.0262 17.2538 41.55 17.9 41.55H29.36C30.0062 41.55 30.53 41.0262 30.53 40.38V37.91C30.53 37.2638 30.0062 36.74 29.36 36.74Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M27.06 41.55H20.32C19.5855 41.55 18.99 42.1455 18.99 42.88V44.67C18.99 45.4045 19.5855 46 20.32 46H27.06C27.7945 46 28.39 45.4045 28.39 44.67V42.88C28.39 42.1455 27.7945 41.55 27.06 41.55Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M26.42 14.11H20.78L17.96 19L20.78 23.88H26.42L29.24 19L26.42 14.11Z" stroke="black" stroke-miterlimit="10"/>
+<path d="M35.09 26.06L37.09 28.05" stroke="black" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4.44 4.44"/>
+<path d="M23.54 2L23.65 4.82" stroke="black" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4.44 4.44"/>
+<path d="M8 11.19L10.61 12.26" stroke="black" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4.44 4.44"/>
+<path d="M36.91 12.94L39.46 11.74" stroke="black" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4.44 4.44"/>
+<path d="M9.48999 27.76L11.74 26.06" stroke="black" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4.44 4.44"/>
+</svg>

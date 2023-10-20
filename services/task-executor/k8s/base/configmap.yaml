@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-task-executor
+data:
+  MESSAGE_BROKER_HOST: local-elia-message-broker.local.svc.cluster.local
+  MESSAGE_BROKER_DEFAULT_USER: root
+
+  #database
+  DATABASE_HOST: local-elia-database.local.svc.cluster.local
+  DATABASE_PORT: '27017'
+  MONGO_INITDB_DATABASE: elia
+  MONGO_INITDB_USERNAME: elia
+
+  SMTP_HOST: mail.elia.academy
+
+  SMTP_PORT: "587"
+  SMTP_TLS: "True"
+  SMTP_USER: noreplay@elia.academy
+  EMAILS_FROM_EMAIL: noreplay@elia.academy
+  
+  BACKEND_URL: http://local-elia-backend.local.svc.cluster.local/api/v1
+  #ELIA_ALGORITHMS_URL: http://local-elia-algorithms.local.svc.cluster.local:5000
+  ELIA_ALGORITHMS_URL: https://evvo:algorithms-evvo-password@algorithms.elia.academy

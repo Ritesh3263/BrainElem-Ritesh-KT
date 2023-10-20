@@ -1,0 +1,647 @@
+.ProjectsContainer{
+height: 100%;
+
+
+.pos-absolute {
+  position: absolute;
+}
+
+.no-scroll {
+  overflow-y: unset;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.w-500 {
+  width: 500px;
+}
+
+span {
+  text-transform: none !important;
+}
+.mainChildDiv {
+  background-color: var(--PWhite);
+  padding: 0 25px;
+  margin: 0 30px;
+  width: auto;
+  border-radius: 16px;
+  position: relative;
+
+  .project_content {
+    padding: 0 40px;
+    margin-top: 25px;
+    .project_heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .typo_h5 {
+        margin-bottom: 0;
+        margin-right: 60px;
+        font-weight: 700;
+        font-size: 50px;
+        color: var(--MedPurple);
+        font-family: "Nunito";
+      }
+      .heading_buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .uploadCSVbtn {
+          margin: 0;
+        }
+        .btnClear {
+          background-color: transparent;
+          color: #f79c30;
+          border: 2px solid #f79c30;
+          border-radius: 10px;
+          padding: 0 20px !important;
+          box-shadow: none;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .btn_primary {
+    padding: 8px 44px;
+    border: 2px solid #f79c30;
+    background: #f79c30;
+    border-radius: 10px;
+    font-size: 20px;
+    color: var(--PWhite);
+    margin-right: 15px;
+    &:hover {
+      background: #f79c30;
+    }
+  }
+  .btn_secondary {
+    padding: 8px 44px;
+    border: 2px solid #f79c30;
+    background-color: transparent;
+    font-size: 20px;
+    color: #f79c30;
+    border-radius: 10px;
+  }
+
+  /* For User Table*/
+
+  .usercsc_accordian {
+    .minHeight-60vh {
+      min-height: 60vh;
+      .modelUserPic {
+        width: 400px;
+        position: absolute;
+        bottom: 0;
+        right: 200px;
+      }
+    }
+    .CSVTable {
+      box-shadow: none;
+      .titleCsv {
+        display: none;
+      }
+      .subtitleCsv {
+        display: none;
+      }
+      .tableHeader {
+        .col,
+        .col-1 {
+          border-bottom: 1px solid var(--SupCloudy);
+
+          small {
+            font-weight: 600;
+            font-size: 1rem;
+          }
+        }
+      }
+      .tblRows {
+        border: none;
+        border-bottom: 1px solid var(--SupCloudy);
+        .indexAvtar {
+          background-color: transparent;
+          color: var(--NSupText);
+          font-size: 1rem;
+        }
+        .chkboxUserCSVPreview.Mui-checked {
+          color: var(--NSupText) !important;
+        }
+      }
+      .btnSaveCSV {
+        background-color: #f79c30;
+        color: var(--PWhite);
+        border-radius: 6px;
+        padding: 8px 40px !important;
+      }
+      .btnBackCSV {
+        background-color: transparent;
+        color: #f79c30 !important;
+        border: 2px solid #f79c30;
+        border-radius: 6px;
+        padding: 6px 40px !important;
+      }
+      .gap-20 {
+        gap: 20px;
+        padding: 20px;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .account-grid {
+    .MuiFormControl-marginDense {
+      padding-right: 25px;
+      width: 100%;
+    }
+    // .MuiFilledInput-root {
+    //   border: 1px solid #e7e9ea;
+    //   border-radius: 10px 10px 0px 0px;
+    //   margin-bottom: 30px;
+    //   border-bottom: 2px solid #15a3a5;
+    // }
+  }
+
+  .main-heading {
+    color: var(--MedPurple);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    font-family: "Nunito";
+  }
+
+  .userbtn {
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  .role-sec {
+    margin-top: 30px;
+    .role-checkbox {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 20px;
+
+      .MuiIconButton-label {
+        color: var(--NSupText);
+      }
+
+      .MuiFormControlLabel-root {
+        .MuiTypography-body1 {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+        }
+
+        .Mui-checked {
+          ~ .MuiTypography-body1 {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .hideUserList {
+    display: none;
+  }
+  .showUserList {
+    display: block;
+  }
+}
+.mainChildDiv:after {
+  content: "";
+  height: 50%;
+  background: var(--MedPurple);
+  z-index: -1;
+  position: absolute;
+  left: -15px;
+  bottom: -50px;
+  right: -15px;
+  border: 15px var(--MedPurple) solid;
+  border-bottom: 50px var(--MedPurple) solid;
+  border-top: none;
+  display: flex;
+  border-radius: 16px;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.tableRoleList {
+  color: var(--NSupText);
+  .MuiDataGrid-columnHeaderTitle {
+    font-size: 14px !important;
+    color: var(--NSupText);
+    font-weight: 600;
+  }
+  .tableRowContent {
+    font-size: 16px;
+    svg {
+      font-size: 27px;
+    }
+  }
+  .MuiDataGrid-row:nth-child(odd) {
+    background: none;
+    background-color: var(--SupCloudy);
+  }
+}
+.txtManagePermission {
+  // font-size: 34px;
+  color: var(--NSupText);
+}
+.createRoleTab {
+  display: flow-root;
+  align-items: flex-start;
+  span {
+    padding: 0 2px;
+    margin: 0;
+    margin-bottom: 1px !important;
+    span {
+      color: var(--NSupText);
+    }
+  }
+}
+.selectWrap {
+  justify-content: flex-start;
+  gap: 0 80px;
+}
+.selectGroup {
+  border: 1px solid var(--PBorderColor);
+  border-radius: 10px;
+  min-width: 230px;
+  .groupHead {
+    display: flex;
+    background-color: var(--PBorderColor);
+    margin-right: 0;
+    margin-left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .groupChild {
+    padding: 0 10px;
+  }
+}
+
+/* Responsiveness */
+
+@media (max-width: 576px) {
+  
+  .mainChildDiv {
+    padding: 0 10px;
+    margin: 0 20px;
+    .admin_content {
+      padding: 0 10px;
+      margin-top: 10px;
+      .typo_h5 {
+        font-size: 2.5rem !important;
+      }
+      .admin_heading {
+        flex-direction: column;
+        align-items: flex-start;
+        .heading_buttons {
+          flex-direction: column;
+          gap: 10px;
+          .btn_primary {
+            font-size: 0.8rem;
+            padding: 5px 12px !important;
+          }
+          .btn_secondary {
+            font-size: 0.8rem;
+            padding: 5px 12px !important;
+          }
+          .pri-btn-wrap {
+            justify-content: space-between;
+          }
+          .btnClear {
+            font-size: 0.8rem;
+            padding: 5px 12px !important;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .tab_style {
+      button {
+        margin-right: 5px;
+        font-size: 0.6rem;
+        padding: 5px 10px;
+        min-width: fit-content;
+        padding: 0 15px 0 5px;
+      }
+    }
+    .usercsc_accordian {
+      overflow-x: scroll;
+      .minHeight-60vh {
+        width: 350%;
+        min-height: 54vh;
+        .modelUserPic {
+          width: 200px;
+          right: 40px;
+        }
+      }
+    }
+    .userbtn {
+      justify-content: center;
+    }
+  }
+  .mb-100{
+    min-width: 100%;
+  }
+  .mb-50{
+    min-width: 50%;
+  }
+  .txtManagePermission {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .w-500 {
+    width: auto !important;
+  }
+  .cardContent {
+    padding: 0;
+  }
+  .selectWrap {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .tableRL {
+    overflow-x: scroll;
+    // .MuiDataGrid-main {
+    //   width: 200%;
+    // }
+  }
+}
+
+/* Responsiveness */
+
+/*--------------------newpermission css---------------*/
+.permission-card {
+  box-shadow: none;
+  padding: 0;
+  min-height: calc(100vh - 210px);
+
+  .permisionForm-grid {
+      // max-width: 600px;
+      width: 100%;
+  }
+}
+
+.permission-heading {
+  color: var(--MedPurple);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  font-family: "Nunito";
+}
+
+.heading-divider {
+  background: var(--Turquoise) !important;
+  border-radius: 10px 0px 0px 10px;
+  width: 56px !important;
+  height: 5px !important;
+  position: relative;
+  border-bottom: 0 !important;
+  margin-left: 3px !important;
+  margin-top: 0.5rem !important;
+
+  &::before {
+    content: "";
+    background: var(--MedPurple);
+    border-radius: 0px 10px 10px 0px;
+    width: 5px;
+    height: 3px;
+    position: absolute;
+    right: -8px;
+  }
+}
+
+.permisionForm {
+  
+  .MuiFormControl-root{
+    margin: 0; 
+    margin-bottom: 20px;
+    padding-right: 15px;
+   }
+
+  .MuiSelect-nativeInput {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.7);
+  }
+  .MuiInputLabel-filled{
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.4);
+  &.Mui-focused {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.5);
+  }
+}
+  .MuiSelect-select:focus{
+      background-color: transparent;
+  }
+}
+
+.userbtn {
+  gap: 10px;
+}
+
+.grid-width{
+  display: flex;
+  flex-direction: column;
+}
+.btn-flex{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+@media (max-width: 992px) {
+  button {
+    font-size: 16px;
+  }
+
+  .permission-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  button {
+    font-size: 16px;
+  }
+
+  .permission-heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  button {
+    font-size: 14px;
+  }
+
+  .permission-heading {
+    font-size: 32px;
+  }
+}
+.permissionTable {
+  width: 100%;
+  .MuiDataGrid-columnHeaderTitle {
+    text-transform: uppercase;
+  }
+}
+.heading h4 {
+  margin-bottom: 40px;
+}
+
+.MuiDataGrid-main {
+  min-height: 15rem !important;
+};
+
+
+.btnStatusInactive {
+  color: var(--NSupText);
+  svg {
+    color: var(--Turquoise);
+  }
+}
+
+.btnStatusDeleted {
+  color: var(--NSupText);
+  svg {
+    color: var(--SRed);
+  }
+}
+.btnStatusActive {
+  color: var(--NSupText);
+  svg {
+    color: var(--SGreen);
+  }
+}
+
+.dialogButton { // width: '100%', borderRadius: '4px 4px 0 0', borderBottom: '3px solid #15a3a5', height: '3.55rem'
+  width: 100% !important;
+  border-radius: 10px 10px 0 0 !important;
+  border-bottom: 2px solid var(--MedPurple) !important;
+  height: 52px;
+  font-size: 16px;
+  border: 1px solid var(--PBorderColor);
+  padding: 10px;
+  background-color: var(--PWhite);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+.MuiInputLabel-root {
+  // top: -3px;
+  font-size: 16px !important;
+  color: var(--NSupText) !important;
+}
+
+.MuiDialog-container {
+      align-items: baseline;
+      justify-content: end;
+
+      .MuiPaper-root {
+          margin: 0;
+          border-radius: 0;
+          overflow: auto;
+      }
+  }
+
+  .dialog_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #EEEBF1;
+      padding-bottom: 8px;
+  }
+
+  .dialog_content {
+      height: 79vh;
+      overflow: auto;
+      padding-right: 6px;
+
+      .checkbox_group {
+          .checkbox_item {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 8px;
+          }
+      }
+  }
+
+  .dialog_button {
+      display: flex;
+      justify-content: space-between;
+  }
+
+
+.btn_result{
+  display: flex ;
+  gap: 20px;
+}
+
+.datePickerH{
+  .MuiInputLabel-root{
+    opacity: 1;
+    top: 0px;
+    color: var(--NSupText);
+  }
+}
+
+.datePickerH2{
+  width: 8rem;
+  .MuiFilledInput-root{
+    opacity: 1;
+    // height: 65px;
+    border-bottom: 1px solid var(--PBorderColor);
+    border-radius: 10px;
+    height: 40px;
+    top: 0;
+    // width:11rem;
+    .MuiInputAdornment-positionEnd{
+      margin-left: 0;
+    }
+    input {
+      padding: 8px 0px 8px 8px;
+    }
+  }
+  .MuiIconButton-root{
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// parent CSS closer
+}

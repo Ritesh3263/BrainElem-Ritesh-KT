@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-database-interface
+data:
+  ME_CONFIG_MONGODB_SERVER: local-dev-evvo-elia-database.local-dev-evvo.svc.cluster.local
+

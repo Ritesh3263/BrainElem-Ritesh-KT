@@ -1,0 +1,466 @@
+.dimension_sec {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+        margin-right: 20px;
+        width: 500px;
+        height: 280px;
+        object-fit: cover;
+    }
+}
+
+.results_bubble {
+    border-radius: 16px;
+    .bubble_bg {
+        background-color: var(--SupCloudy);
+        border-radius: 16px;
+        padding: 15px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 8%;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-bottom-color: var(--SupCloudy);
+            border-top: 0;
+            margin-left: -13px;
+            margin-top: -18px;
+        }
+    }
+}
+
+.skillsBg {
+    background-color: var(--PWhite);
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.graph_box {
+    min-height: 100%;
+    .gaurge_graph {
+        height: fit-content;
+    }
+}
+
+.stats_table {
+    .exportBtn {
+        display: none;
+    }
+}
+
+.results_gauge_chart, .stacked_chart {
+    background-color: var(--SupCloudy);
+    border-radius: 10px;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 305px;
+    .para{
+        max-height: 130px;
+        overflow: auto;
+        padding-right: 5px;
+        @media (min-width: '1600px'){
+            max-height: 130px;
+        }
+        @media (min-width: '1700px'){
+            max-height: 100px;
+        }
+        @media (min-width: '1800px'){
+            max-height: 75px;
+        }
+    }
+}
+.results_gauge_chart{
+    cursor: pointer;
+    padding: 50px 20px 20px 20px;
+    height: 420px;
+}
+
+
+.btn_result{
+    display: flex ;
+    gap: 20px;
+    .btn-result{
+        border: 1px solid var(--PBorderColor);
+        color: var(--NSupText);
+        min-width: 300px;
+        justify-content: space-between;
+        font-size: 1rem;
+        height: 50px;
+        border-radius: 8px;
+        font-weight: 400;
+    }
+}
+.table_stats{
+    .MuiDataGrid-virtualScrollerContent{
+        width: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .admin_content .heading_results{
+        gap: 16px !important;
+        margin-bottom: 16px !important;
+    }
+    .btn_result{
+        width: 100%;
+    }
+
+    .dialogButton {
+        width: 100%;
+    }
+    .bar_graph{
+        height: 250px !important;
+        justify-content: left !important;
+        .recharts-cartesian-grid{
+            background-color: var(--SupCloudy);
+        }
+    }
+    .recharts-wrapper{
+        width: 100% !important;
+        height: 250px !important;
+        .recharts-surface{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 250px;
+        }
+    }
+    
+    
+    
+}
+
+.stacked_chart{
+    padding: 13px 10px;
+    .recharts-wrapper{
+        border-bottom: 1px solid var(--NSupText);
+        margin: 0 auto;
+        .recharts-layer:last-child{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    }
+}
+
+.graph_box{
+    .list_item{
+        margin-top: 20px;
+        ul{
+            padding: 0;
+            margin-top: 12px;
+            li{
+                list-style: none;
+                padding-bottom: 12px;
+                position: relative;
+                padding-left: 22px;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+                &::before{
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 50%;
+                    background-color: var(--NSupText);
+                    content: "";
+                    top: 6px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+.btn_points{
+    &:hover{
+        background-color: var(--Turquoise);
+        border-color: var(--Turquoise);
+        cursor: auto;
+    }
+}
+.myresults_verticaltabs{
+    // height: 50vh;
+    min-width: 230px; 
+    max-width: 230px;
+    .MuiTabs-scroller{
+        overflow-y: auto !important;
+        &::-webkit-scrollbar {
+            width: 0px;
+          }
+    }
+    button{
+        background-color: transparent;
+        border: none !important;
+        align-items: end;
+        margin-left: 0 !important;
+        text-transform: capitalize;
+        margin-right: 10px;
+        padding: 0;
+        &.Mui-selected{
+            // background-color: var(--MedPurple) !important;
+            border-radius: 12px;
+            border-right: none !important;
+            svg{
+                color: var(--MedPurple);
+                transform: rotate(90deg);
+            }
+            summary{
+                span{
+                    color: var(--MedPurple);
+                    font-weight: 600;
+                }
+            }
+            > span{
+                color: var(--MedPurple);
+                font-weight: 600;
+            }
+        }
+    }
+    
+    .MuiTabs-indicator{
+        background-color: transparent;
+    }
+
+    
+}
+
+#vertical-tabpanel-0 {
+    > .MuiBox-root{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.myResults_tabing{
+    height: calc(100vh - 350px);
+    @media (max-width:576px) {
+        height: 100%;
+    }
+    // .MuiBox-root{
+    //     height: 100%;
+    // }
+}
+
+
+.tab_listItem{
+    padding: 0;
+    margin: px;
+    li{
+        list-style: none;
+        text-align: right;
+        padding: 0;
+        border-radius: 12px;
+        padding: 12px 12px;
+        margin-bottom: 10px;
+        &:hover{
+            background-color: var(--SupCloudy);
+        }
+        &.active{
+            background-color: var(--MedPurple);
+            span{
+                color: var(--PWhite)
+            }
+            @media (max-width:576px) {
+                border-radius: 4px;
+                color: var(--PWhite)
+            }
+        }
+    }
+}
+.tab_label{
+    summary{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 12px 12px;
+        &::marker{
+            content: '';
+        }
+    }
+}
+.tab_panel{
+    overflow-y: scroll;
+    height: 100%;
+    @media (max-width:576px){
+        overflow-y: hidden;
+    }
+}   
+
+  .guageChartIndex{
+    span{
+        font-size: 14px;
+    }
+    span:nth-child(1){
+        position: absolute;
+        left: 32px;
+        bottom: 33px;
+    }
+    span:nth-child(2){
+        position: absolute;
+        left: 43px;
+        bottom: 76px;
+    }
+    span:nth-child(3){
+        position: absolute;
+        left: 69px;
+        bottom: 114px;
+    }
+    span:nth-child(4){
+        position: absolute;
+        left: 106px;
+        bottom: 139px;
+    }
+    span:nth-child(5){
+        position: absolute;
+        left: 148px;
+        bottom: 151px;
+    }
+    span:nth-child(6){
+        position: absolute;
+        left: 192px;
+        bottom: 150px;
+    }
+    span:nth-child(7){
+        position: absolute;
+        left: 232px;
+        bottom: 138px;
+    }
+    span:nth-child(8){
+        position: absolute;
+        left: 269px;
+        bottom: 113px;
+    }
+    span:nth-child(9){
+        position: absolute;
+        left: 297px;
+        bottom: 75px;
+    }
+    span:nth-child(10){
+        position: absolute;
+        left: 308px;
+        bottom: 35px;
+    }
+  }
+  .tab_panel {
+    width: 100% !important;
+  }
+  .drpdwn_submenu{
+    display: none;
+  }
+
+  .height_80vh{
+    // height: 74vh;
+    @media (max-width:576px) {
+        height: 100%;
+        // overflow-y: scroll;
+    }
+  }
+  .min-w-300{
+    min-width: 300px;
+  }
+//   .sticky-header {
+//     position: sticky !important;
+//     left: 0;
+//     z-index: 1;
+//     background-color: var(--PWhite);
+
+//   }
+
+//   .sticky-header1 {
+//     position: sticky !important;
+//     left: 50px;
+//     z-index: 1;
+//     background-color: var(--PWhite);
+//   }
+  
+//   .sticky-cell {
+//     position: sticky !important;
+//     left: 0;
+//     z-index: 1;
+//     background-color: var(--PWhite);
+//   }  
+
+//   .sticky-cell1{
+//     left: 50px;
+//     position: sticky;
+//     z-index: 1;
+//     background-color: var(--PWhite);
+
+//   }
+  ////////// Responsivenesss ///////////
+  
+  @media (max-width:576px) {
+    .myresults_verticaltabs{
+        max-width: 100% !important;
+        border: none;
+        height: auto;
+        .MuiTabs-flexContainer{
+            flex-direction: row ;
+            // border: 1px solid var(--PBorderColor);
+            // border-radius: 50px;
+            overflow-x: auto;
+            border-bottom: 1px solid var(--NSIconBorder);
+
+        }
+        ::-webkit-scrollbar{
+            height: 0 !important;
+        }
+        button{
+            align-items: center;
+            min-width: fit-content;
+            padding: 0 10px;
+            margin: 0;
+            min-height: 35px;
+            border-radius: 0 !important;
+            span{
+                font-weight: 400;
+                font-size: 14px;
+                margin: 0;
+            }
+            .tab_listItem{
+                display: none;
+            }
+        }
+        button.Mui-selected{
+            border-bottom: 2px solid var(--MedPurple) !important;
+            background: none;
+            
+            span{
+                font-weight: 700;
+                color: var(--NSupText);
+            }
+        }
+    }
+    .drpdwn_submenu{
+        display: flex;
+        margin-bottom: 20px;
+        width: fit-content;
+        legend{
+            width:0;
+        }
+        .MuiSelect-select {
+            padding: 10px;
+        }
+        .MuiInputBase-formControl{
+            border-radius: 10px;
+        }
+        .MuiInputLabel-root{
+            transform: translate(14px, 7px) scale(1);
+        }
+       
+    }
+    
+        
+    .guageChartIndex{
+        transform: scale(0.9) translateX(-60px);
+      
+    }
+    .recharts-responsive-container{
+        height: 250px !important;
+        width: 95% !important;
+    }
+
+}

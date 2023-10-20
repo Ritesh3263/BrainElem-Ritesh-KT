@@ -1,0 +1,11 @@
+.vscode
+.idea
+.mypy_cache
+docker-stack.yml
+services/backend/swagger/swagger.json
+/.idea/vcs.xml
+/.idea/workspace.xml
+.DS_Store
+*-tags.json
+services/frontend/src/services/axiosSettings/axiosSettings.js
+node_modules/

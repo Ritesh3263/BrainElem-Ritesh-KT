@@ -1,0 +1,46 @@
+<div class="main-container">
+    <header>
+        <img src="https://cloud.braincore.ch/s/kjxwJ9JAzxN9bFM/preview" alt="BrainCore Test Logo"/>
+    </header>
+  
+    <div class="page-padding flexing-horizontal align-center">
+      <div class="col-48 big-pic">
+        <img src='{{getEduPic (getTraitByKey @root currentNad "abbreviation")}}' alt="NAD picture"/>
+      </div>
+      <div class="col-53 space-left-24">
+        <div class="scoreNad"><h1 class="scoreVal white m-bold">{{getTraitByKey @root currentNad "normalizedValue" }}</h1></div>
+        <div class="nadCircle"><h3 class="m-bold white fixSub pad-0">{{readHtmlInside (fixNadAbbreviation (getTraitByKey @root currentNad "abbreviation")) }}</h3></div>
+        <h1 class="m-bold purple">{{getTraitByKey @root currentNad "shortName" }}</h1> <!--N<span>1</span> - {{ nads.n1Name }}-->        
+      </div>
+    </div>
+    <div class="page-padding pad-16">
+      <p class="text-120">{{getTraitByKey @root currentNad "description"}}</p>
+    </div>
+
+    <div class="page-padding">
+      <div class="flexing-horizontal align-center">
+        <img class="small-pic" src="https://cloud.braincore.ch/s/5cNpGGQoiTgwjLB/preview" alt=""/>
+        <h4 class="pink m-bold">{{ staticT.nadHigh }}</h4>
+      </div>
+      <div class="pad-16">
+        <ol>
+          {{readHtmlInside (stripWhitespacesFromString (getTraitByKey @root currentNad "high")) }}
+        </ol>
+      </div>
+      <div class="flexing-horizontal align-center">
+        <img class="small-pic" src="https://cloud.braincore.ch/s/JwDWSRJApp2fNWq/preview" alt=""/>
+        <h4 class="pink m-bold">{{ staticT.nadLow }}</h4>
+      </div>
+      <div>
+        <ol>
+          {{readHtmlInside (stripWhitespacesFromString (getTraitByKey @root currentNad "low")) }}
+        </ol>
+      </div>
+    </div>
+  
+    <footer>
+      <div class="page-padding flexing-horizontal justify-between">
+        <p>{{user.name}} {{user.surname}}</p><p>{{ getEduPageNumber nadId 0 startPage 1}}</p>
+      </div>
+    </footer>
+</div>

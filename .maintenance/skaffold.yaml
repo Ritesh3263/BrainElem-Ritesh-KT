@@ -1,0 +1,69 @@
+apiVersion: skaffold/v2beta17
+kind: Config
+
+deploy:
+  kustomize:
+    paths:
+    - k8s/base
+
+profiles:
+  - name: local
+    build:
+      artifacts:
+        - image: maintenance
+          docker:
+            dockerfile: Dockerfile
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/local
+  - name: dev
+    build:
+      artifacts:
+        - image: maintenance
+          docker:
+            dockerfile: Dockerfile
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/dev
+  - name: stage
+    build:
+      artifacts:
+        - image: maintenance
+          docker:
+            dockerfile: Dockerfile
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/stage
+  - name: prod-ch
+    build:
+      artifacts:
+        - image: maintenance
+          docker:
+            dockerfile: Dockerfile
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/prod/ch
+  - name: prod-fr
+    build:
+      artifacts:
+        - image: maintenance
+          docker:
+            dockerfile: Dockerfile
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/prod/fr

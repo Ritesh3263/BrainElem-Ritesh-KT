@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maintenance
+spec:
+  selector:
+    matchLabels:
+      app: maintenance
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: maintenance
+    spec:
+      containers:
+        - name: maintenance
+          image: maintenance
+          ports:
+          - name: http
+            containerPort: 80
+          resources: {}
+      restartPolicy: Always

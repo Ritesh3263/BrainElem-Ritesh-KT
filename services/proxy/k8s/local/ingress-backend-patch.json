@@ -1,0 +1,23 @@
+[
+    { 
+        "op": "replace", 
+        "path": "/spec/rules/0/host", 
+        "value": "elia.lc"
+    },
+    {
+      "op": "replace",
+      "path": "/spec/rules/0/http/paths/0/backend/service/name",
+      "value": "local-elia-backend"
+    },
+    {
+      "op": "replace",
+      "path": "/spec/rules/0/http/paths/1/backend/service/name",
+      "value": "local-elia-backend"
+    },
+    {
+      "op": "replace",
+      "path": "/spec/rules/0/http/paths/2/backend/service/name",
+      "value": "local-elia-backend"
+    }
+  ]
+  

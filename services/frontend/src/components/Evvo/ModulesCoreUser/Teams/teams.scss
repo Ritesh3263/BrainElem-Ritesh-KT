@@ -1,0 +1,552 @@
+
+.team_list{
+.admin_content {
+  .admin_heading {
+    display: flex;
+    align-items: center;
+    .heading_buttons{
+      display: flex;
+      justify-content: space-between;
+      .uploadCSVbtn{
+        margin: 0;
+      }
+    }
+  }
+}
+.w-input{
+  width: 100%;
+}
+/* For User Table*/
+
+  .minHeight-60vh{
+    min-height: 460px;
+    @media (max-width:576px) {
+      min-height: 90vh;
+    }
+    .modelUserPic{
+      width: 350px;
+      position: absolute;
+      bottom: 0;
+      right: 200px;
+      @media (max-width:576px) {
+        width: 300px;
+        bottom: 0;
+        right:50%;
+        transform: translateX(50%);
+      }
+    }
+
+  .CSVTable{
+    box-shadow: none;
+    .titleCsv{
+      display: none;
+    }
+    .subtitleCsv{
+      display: none;
+    }
+    .tableHeader{
+      .col, .col-1{
+          border-bottom: 1px solid var(--SupCloudy);
+
+          small{
+              font-weight: 600;
+              font-size: 1rem;
+          }
+      }
+    }
+    .tblRows{
+      border: none;
+      border-bottom: 1px solid var(--SupCloudy);
+      .indexAvtar{
+        background-color: transparent;
+        color: var(--NSupText);
+        font-size: 1rem;
+      }
+      .chkboxUserCSVPreview.Mui-checked{
+        color: var(--NSupText) !important;
+      }
+
+    }
+
+
+
+  }
+
+
+}
+
+.account-grid {
+  .MuiFormControl-marginDense {
+    padding-right: 25px;
+    width: 100%;
+  }
+  .MuiFilledInput-root {
+    border: 1px solid var(--PBorderColor);
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--SBluelight2);
+  }
+}
+
+.userbtn {
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.role-sec {
+  margin-top: 30px;
+  .role-checkbox {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 20px;
+
+    .MuiIconButton-label {
+      color: var(--NSupText);
+    }
+
+    .MuiFormControlLabel-root {
+      .MuiTypography-body1 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      .Mui-checked {
+        ~ .MuiTypography-body1 {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.hideUserList {
+  display: none;
+}
+.showUserList {
+  display: block;
+}
+
+}
+.actionBtns{
+display: flex;
+gap: 10px;
+}
+
+.tableRoleList{
+color:var(--NSupText);
+.MuiDataGrid-columnHeaderTitle{
+  font-size: 16px !important;
+  color: var(--NSupText);
+  font-weight: 600;
+}
+.tableRowContent{
+  font-size: 16px;
+}
+.MuiDataGrid-row:nth-child(odd){
+  background: none;
+  background-color: var(--SupCloudy);
+}
+}
+
+.createRoleTab{
+display: flow-root;
+align-items: flex-start;
+span{
+  padding: 0 2px;
+  margin: 0;
+  margin-bottom: 1px !important;
+  span{
+    color: var(--NSupText);
+  }
+}
+}
+.selectWrap{
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.teams_Group{
+  .groupHead{
+    display: flex;
+    background-color: var(--SupCloudy);
+    margin-right: 0;
+    margin-left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid var(--PBorderColor);
+  }
+}
+
+/* Responsiveness */
+
+
+/* Responsiveness */
+
+
+
+.hideUserList {
+  display: none;
+}
+
+.showUserList {
+  display: block;
+}
+
+/*-----------------temaList table-----------------------*/
+.temaList_table{
+  .MuiDataGrid-columnHeaders {
+    .MuiDataGrid-columnHeaderTitle {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: var(--NSupText);
+    }
+  }
+.MuiDataGrid-main{
+  width: 100%;
+  overflow-x: auto;
+}
+  .MuiDataGrid-virtualScrollerContent {
+    .MuiDataGrid-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+
+      &:nth-of-type(odd) {
+        background-color: var(--PBorderColor);
+      }
+
+      .MuiDataGrid-cellContent {
+        color: var(--NSupText);
+      }
+      .user-color{
+        color: var(--MedPurple);
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.totalUserCell{
+  position: relative;
+  overflow: visible !important;
+}
+.filter {
+  background: var(--SupCloudy);
+  border-bottom: 1px solid var(--PBorderColor);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+.filterRight-sec{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+  .fiterText {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border: 1px solid var(--SblueLight);
+    border-radius: 10px;
+  }
+
+  .MuiInputBase-input {
+    max-width: 200px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--PBlackLight2);
+  }
+
+  .MuiFormControl-root {
+    margin: 0;
+    max-width: 200px;
+  }
+}
+/*-----------------temaList table-----------------------*/
+@media (max-width: 992px) {
+  .filter {
+    padding-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .team_list{
+    .admin_content {
+      .admin_heading{
+        flex-direction: column;
+        align-items: flex-start;
+        .heading_buttons{
+          flex-direction: column;
+          gap: 10px;
+          .pri-btn-wrap{
+            justify-content: space-between;
+          }
+          .btnClear{
+            font-size: .8rem;
+            padding: 5px 12px !important;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .tab_style{
+      button{
+        margin-right: 5px;
+        font-size: .6rem;
+        padding: 5px 10px;
+        min-width: fit-content;
+        padding: 0 15px 0 5px;
+      }
+    }
+    .usercsc_accordian {
+      overflow-x: scroll;
+      .minHeight-60vh{
+        width: 350%;
+        min-height: 54vh;
+        .modelUserPic{
+          width: 200px;
+          right: 40px;
+        }
+      }
+    }
+    .userbtn{
+      justify-content: center;
+      button{
+        min-width: auto ;
+      }
+    }
+  }
+  .admin_heading{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    .btn_primary{
+      margin: 0;
+      min-width: 100%;
+    }
+  }
+  .txtManagePermission{
+    padding: 0;
+  }
+  .w-500{
+    width: auto !important;
+  }
+  .w-100-mb{
+    width: 100%;
+  }
+  .cardContent{
+    padding: 0;
+  }
+  .selectWrap{
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .tableRL{
+    overflow-x: auto;
+  }
+  .filter {
+    justify-content: center !important;
+    gap: 0 !important;
+    padding: 10px 5px !important;
+    .filterRight-sec{
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+    }    
+  }
+}
+.arrowBtns-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .arrowBtns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .arrowLeft,  .arrowRight{
+      background-color: var(--SupCloudy);
+      border-radius: 5px;
+      width: 60px;
+      gap: 10px;
+      svg{
+        width: 22px;
+        color: var(--NSupText);
+        @media (max-width: 899px ) {
+          transform: rotate(90deg);
+        }
+        
+      }
+      
+    }
+  }
+}
+.teamSearchFeild{
+  border: 1px solid var(--PBorderColor);
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+  .MuiOutlinedInput-notchedOutline{
+    border: none;
+  }
+}
+.selectGroupInner{
+  padding: 15px;
+  .groupChild {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:899px){
+  .arrowBtns-flex{
+    .arrowBtns{
+    flex-direction: row;
+    padding: 30px 0;
+  }
+  }
+}
+.teams_togglemenu{
+  .MuiMenu-list{
+    padding: 12px;
+    li{
+      padding: 8px;
+    }
+  }
+}
+.filter_list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--SupCloudy);
+  padding: 8px 16px;
+}
+.edit_teams{
+  .admin_heading{
+    display: flex;
+    @media (max-width: '1200px'){
+      flex-direction: column;
+    }
+  }
+  .teams_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    @media (max-width: '1200px'){
+      justify-content: flex-start;
+    }
+  }
+  .progress_bar{
+    min-width: 200px;
+    @media (max-width: '1200px'){
+      margin-top: 16px;
+      width: 100%;
+    }
+  }
+  .test_status{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: '992px'){
+      flex-direction: column;
+    }
+  }
+}
+.btnStatusSent {
+  svg {
+    color: var(--Turquoise);
+  }
+}
+
+.btnStatusNotCompleted {
+  svg {
+    color: var(--SRed);
+  }
+}
+.btnStatusCompleted {
+  svg {
+    color: var(--SGreen);
+  }
+}
+.btnStatusNoTest {
+  svg {
+    color: var(--NSupText);
+  }
+}
+.view_results{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: var(--SupCloudy);
+    padding: 8px 10px;
+}
+.userDetailsPopup{
+  .datePickerH{
+    .MuiFilledInput-root{
+      height: 65px;
+      border-bottom-width: 3px;
+    }
+  }
+}
+.team_popup{
+  width: 450px; 
+  height: 100vh; 
+  overflow: auto; 
+  display: flex; 
+  align-items: inherit ; 
+  flex-direction: column;
+  @media (max-width: 600px){
+    width: 100%;
+  }
+  .top_header {
+      padding: 14px 16px;
+      position: sticky;
+      top: 0px;
+      background-color: var(--PWhite);
+      z-index: 9;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid var(--NSIconBorder);
+      padding-top: 15px;
+      padding-bottom: 8px;
+      height: 70px;
+    }
+  .preview_details, .teams_Group, .bottom_button{
+    padding: 14px 16px;
+  }
+  .bottom_button{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--PWhite);
+    display: flex;
+    gap: 26px;
+    button{
+      width: 50%;
+    }
+  }
+}

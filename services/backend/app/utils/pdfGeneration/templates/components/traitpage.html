@@ -1,0 +1,49 @@
+<div class="main-container">
+	<div class="layout-top-pic"><img src="https://cloud.braincore.ch/s/FCr5FGBmXs3NrsJ/preview" alt="" /></div>
+	<header class="page-padding head-cont traits-head">
+	    <div class="titles">
+			<h2 class="mpurp uppers t-left" data="trait_category">{{section}}</h2>
+			<h1 class="dpurp" data="trait_name">{{traitName}}</h1>
+		</div>
+		<div class="icon trait-ico">
+			<img src="{{getTraitIcon traitIcon}}" alt=""/>
+		</div>
+	</header>
+	<main>
+		<div class="main-description page-padding marginTop">
+			<p class="size-14">{{definition}}</p>
+		</div>
+		<div class="trait-score-container page-padding">
+			<div class="trait-cont-1">
+				<div class="score-frame size-25">
+					<div class="score-value"><p class="blue">{{traitValue}}</span></p></div>
+				</div>
+				<div class="tree-indicator size-75">
+					<img data="tree_lvl_url" src="{{getTree treeValue images.trees}}" alt="">
+				</div>
+			</div>
+			<div class="trait-cont-2">
+				<div class="size-25">
+					<h3 class="al-right bold mpurp">{{personalDesc}}</h3>
+				</div>
+				<div class="score-points size-75" data="trait_results">
+					<ul class="r-bold">
+						{{#each traitDesc }}
+						<li class="size-14"><div class="liBox"></div>{{this}}</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="page-padding">
+    <div class="logo-foot">
+		<img src="https://cloud.braincore.ch/s/sZiK53D5tRF3ipP/preview" alt="BrainCore Logo"/>
+	</div>
+    <div class="footing white">
+        <!--<span class="f-small" data="date">{{ formatDate pages.[0].date "DD.MM.yyyy" ""}}</span>-->
+        <span class="f-small" data="username">{{ getUserForFooter pages.[0].user}}</span>
+        <span class="f-small r-bold" data="page_number">{{currentPage}}/{{totalPages}}</span>
+    </div>
+	</footer>
+</div>

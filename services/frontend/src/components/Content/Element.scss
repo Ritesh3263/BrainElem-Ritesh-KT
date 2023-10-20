@@ -1,0 +1,25 @@
+.MuiAccordion-root{
+    margin: 20px 0 !important;
+    box-shadow: none;
+    .MuiAccordionSummary-root{
+        min-height: 35px;
+        border-radius: 8px !important;
+        border: 1px solid var(--PBorderColor);
+    }
+    .MuiCollapse-root{
+        background-color: var(--PLGrey);
+    }
+}
+.formcontrol_element{
+    .MuiInputLabel-filled{
+        top: -7px !important;
+    }
+    .MuiInputLabel-shrink{
+        top: 0px !important;
+    }
+    .MuiFilledInput-root{
+        &:hover{
+            border-bottom-color: #e7e9ea !important;
+        }
+    }
+}

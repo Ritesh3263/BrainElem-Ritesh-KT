@@ -1,0 +1,53 @@
+  .mainCategoryDiv{
+    .admin_content {
+      .admin_heading {
+        display: flex;
+        
+        .heading_buttons{
+          display: flex;
+          width: 100%;
+          justify-content: flex-start;
+          gap: 20px; 
+        }
+      }   
+    }
+  }
+  .mainCategoryDiv .account-grid .MuiFilledInput-root{
+    border: 1px solid #e7e9ea;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 2px solid #15a3a5;
+    background-color: var(--PWhite);
+    height: 60px;
+  }
+  .MuiChip-root{
+    color: var(--NSupText);
+    .MuiChip-deleteIcon{
+      color: var(--NSupText);
+    }
+  }
+  .role-sec-head{
+    margin-top: 3rem;
+    @media (max-width: 576px){
+      margin-top: 0;
+    }
+  }
+  .cat-form-box{
+    display: flex; 
+    gap:20px; 
+    width:100%;
+  }
+  .catagory-checkbox{
+    color: var(--NSupText);
+    .Mui-checked{
+      color: var(--NSupText);
+    }
+  }
+
+  @media (max-width: 576px){
+    .cat-tbl{
+      overflow-x: scroll;
+    }
+    .cat-form-box{
+      flex-direction: column;
+    }
+  }

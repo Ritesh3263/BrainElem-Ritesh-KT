@@ -1,0 +1,18 @@
+[
+    {
+      "op": "add",
+      "path": "/metadata/annotations/traefik.ingress.kubernetes.io~1router.middlewares",
+      "value": "local-local-elia-basic-auth-middleware@kubernetescrd"
+    },
+    { 
+        "op": "replace", 
+        "path": "/spec/rules/0/host", 
+        "value": "search-engine-interface.elia.lc"
+    },
+    {
+      "op": "replace",
+      "path": "/spec/rules/0/http/paths/0/backend/service/name",
+      "value": "local-elia-search-engine-interface"
+    }
+  ]
+  

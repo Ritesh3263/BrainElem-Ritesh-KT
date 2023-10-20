@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-task-executor
+data:
+  MESSAGE_BROKER_HOST: local-dev-evvo-elia-message-broker.local-dev-evvo.svc.cluster.local
+  DATABASE_HOST: local-dev-evvo-elia-database.local-dev-evvo.svc.cluster.local
+
+  EMAILS_FROM_EMAIL: noreplay@elia.academy
+
+  BACKEND_URL: http://local-dev-evvo-elia-backend.local-dev-evvo.svc.cluster.local/api/v1
+  ELIA_ALGORITHMS_URL: https://evvo:algorithms-evvo-password@algorithms.elia.academy

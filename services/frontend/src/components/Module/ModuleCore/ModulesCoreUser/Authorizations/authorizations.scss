@@ -1,0 +1,322 @@
+
+/* universal */
+
+.mainChildDiv {
+  background-color: var(--PWhite);
+  padding: 0 25px;
+  margin: 0 30px;
+  width: auto;
+  border-radius: 16px;
+  position: relative;
+
+  .admin_content {
+    padding: 0 40px;
+    margin-top: 25px;
+    .admin_heading {
+      display: flex;
+      align-items: center;
+      .heading_buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .uploadCSVbtn {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  /* For User Table*/
+
+  .usercsc_accordian {
+    .minHeight-60vh {
+      min-height: 60vh;
+      .modelUserPic {
+        width: 400px;
+        position: absolute;
+        bottom: 0;
+        right: 200px;
+      }
+    }
+    .CSVTable {
+      box-shadow: none;
+      .titleCsv {
+        display: none;
+      }
+      .subtitleCsv {
+        display: none;
+      }
+      .tableHeader {
+        .col,
+        .col-1 {
+          border-bottom: 1px solid var(--SupCloudy);
+
+          small {
+            font-weight: 600;
+            font-size: 1rem;
+          }
+        }
+      }
+      .tblRows {
+        border: none;
+        border-bottom: 1px solid var(--SupCloudy);
+        .indexAvtar {
+          background-color: transparent;
+          color: var(--NSupText);
+          font-size: 1rem;
+        }
+        .chkboxUserCSVPreview.Mui-checked {
+          color: var(--NSupText) !important;
+        }
+      }
+      .gap-20 {
+        gap: 20px;
+        padding: 20px;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .account-grid {
+    .MuiFormControl-marginDense {
+      padding-right: 25px;
+      width: 100%;
+    }
+    .MuiFilledInput-root {
+      border: 1px solid #e7e9ea;
+      border-radius: 10px 10px 0px 0px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #15a3a5;
+    }
+  }
+
+  .main-heading {
+    color: var(--MedPurple);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    font-family: "Nunito";
+  }
+
+  .userbtn {
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  .role-sec {
+    margin-top: 30px;
+    .role-checkbox {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 20px;
+
+      .MuiIconButton-label {
+        color: var(--NSupText);
+      }
+
+      .MuiFormControlLabel-root {
+        .MuiTypography-body1 {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+        }
+
+        .Mui-checked {
+          ~ .MuiTypography-body1 {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .hideUserList {
+    display: none;
+  }
+  .showUserList {
+    display: block;
+  }
+}
+
+.actionBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.tableRoleList {
+  color: var(--NSupText);
+  .MuiDataGrid-columnHeaderTitle {
+    font-size: 16px !important;
+    color: var(--NSupText);
+    font-weight: 600;
+  }
+  .tableRowContent {
+    font-size: 16px;
+    svg {
+      font-size: 27px;
+    }
+  }
+  .MuiDataGrid-row:nth-child(odd) {
+    background: none;
+    background-color: var(--SupCloudy);
+  }
+}
+.txtManagePermission {
+  font-size: 34px;
+  color: var(--NSupText);
+}
+.createRoleTab {
+  display: flow-root;
+  align-items: flex-start;
+  span {
+    padding: 0 2px;
+    margin: 0;
+    margin-bottom: 1px !important;
+    span {
+      color: var(--NSupText);
+    }
+  }
+}
+.selectWrap {
+  justify-content: flex-start;
+  gap: 0 80px;
+}
+.selectGroup {
+  border: 1px solid var(--PBorderColor);
+  border-radius: 10px;
+  min-width: 230px;
+  .groupHead {
+    display: flex;
+    background-color: var(--PBorderColor);
+    margin-right: 0;
+    margin-left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .groupChild {
+    padding: 0 10px;
+  }
+}
+
+/* Responsiveness */
+
+@media (max-width: 576px) {
+  
+  .mainChildDiv {
+    padding: 0 10px;
+    margin: 0 20px;
+    .admin_content {
+      padding: 0 10px;
+      margin-top: 10px;
+      .typo_h5 {
+        font-size: 2.5rem !important;
+      }
+      .admin_heading {
+        flex-direction: column;
+        align-items: flex-start;
+        .heading_buttons {
+          flex-direction: column;
+          gap: 10px;
+          .pri-btn-wrap {
+            justify-content: space-between;
+          }
+          .btnClear {
+            font-size: 0.8rem;
+            padding: 5px 12px !important;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .tab_style {
+      button {
+        margin-right: 5px;
+        font-size: 0.6rem;
+        padding: 5px 10px;
+        min-width: fit-content;
+        padding: 0 15px 0 5px;
+      }
+    }
+    .usercsc_accordian {
+      overflow-x: scroll;
+      .minHeight-60vh {
+        width: 350%;
+        min-height: 54vh;
+        .modelUserPic {
+          width: 200px;
+          right: 40px;
+        }
+      }
+    }
+    .userbtn {
+      justify-content: center;
+      button {
+        min-width: auto;
+      }
+    }
+  }
+  .txtManagePermission {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .w-500 {
+    width: auto !important;
+  }
+  .cardContent {
+    padding: 0;
+  }
+  .selectWrap {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .tableRL {
+    overflow-x: scroll;
+    .MuiDataGrid-main {
+      width: 200%;
+    }
+  }
+}
+
+/* Responsiveness */
+
+/*--------------------newpermission css---------------*/
+.permission-card {
+  box-shadow: none;
+  padding: 0;
+  min-height: calc(100vh - 210px);
+
+  .permisionForm-grid {
+      // max-width: 600px;
+      width: 100%;
+  }
+}
+
+.permission-heading {
+  color: var(--MedPurple);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  font-family: "Nunito";
+}
+.userbtn {
+  gap: 10px;
+}
+
+.btn-flex{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.permissionTable {
+  max-width: 600px;
+  width: 100%;
+  .MuiDataGrid-columnHeaderTitle {
+    text-transform: uppercase;
+  }
+}
+.heading h4 {
+  margin-bottom: 40px;
+}

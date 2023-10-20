@@ -1,0 +1,146 @@
+@import "../../scss/variables";
+@import "../../scss/functions";
+@import "../../scss/mixins";
+
+.main_navigation{
+  .nav_bar{
+    ul.main_menu{
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+      li{
+        list-style: none;
+        position: relative;
+        transition: all linear 0.2s;
+        margin: 0 2px;
+        a{
+          padding: 7px 13px;
+          display: block;
+          color: inherit;
+          white-space: nowrap;
+          span{
+            svg{
+              transition: all linear 0.2s;
+            }
+          }
+        }
+        ul.submenu{
+          padding: 0;
+          position: absolute;
+          min-width: 100px;
+          display: none;
+          background-color: var(--SupCloudy);
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 10px;
+          li{
+            a{
+              span{
+                font-size: 16px;
+              }
+            }
+            &:hover >{
+              a{
+                span{
+                  color: var(--MedPurple);
+                }
+              }
+            }
+            &.hassubs{
+              .submenu{
+                border: none;
+                display: none;
+                position: static;
+                width: auto;
+                box-shadow: none;
+                background-color: var(--PWhite);
+                overflow: inherit;
+                left: 0;
+                transform: translateX(0);
+                border-radius: 10px;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+                padding: 20px 16px;
+                li{
+                  border-radius: 10px;
+                  a{
+                    padding: 10px 12px;
+                    span{
+                      font-size: 15px;
+                      color: var(--NSupText)
+                    }
+                  }
+                  &:hover{
+                    background-color: var(--MedPurple);
+                    span{
+                      color: var(--PWhite);
+                    }
+                  }
+                }
+              }
+              &:hover{
+                ul.submenu{
+                  display: block;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+        &:hover{
+          > a{
+            text-decoration: none; 
+            span{
+              color: var(--MedPurple);
+              svg{
+                transform: rotate(180deg);
+                transition: all linear 0.2s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.menu_active{
+  background-color: var(--SupCloudy) !important;
+  > a{
+    span{
+      color: var(--MedPurple);
+      svg{
+        transform: rotate(180deg);
+        transition: all linear 0.2s;
+      }
+    }
+  }
+  > ul.submenu{
+    display: flex !important;
+    .active{
+      position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          transform: translateX(-50%);
+          border: 1.5px solid var(--Turquoise);
+          width: calc(100% - 40px);
+          border-radius: 10px;
+        }
+      span{
+        color: var(--MedPurple);
+      }
+    }
+  }
+}
+.main_menu > li.active span{
+  color: var(--MedPurple);
+}
+.menu_active > ul.hidetext{
+  display: none !important;
+}
+.main_navigation .nav_bar ul.main_menu li a.hidesubtext{
+  display: none !important;
+}

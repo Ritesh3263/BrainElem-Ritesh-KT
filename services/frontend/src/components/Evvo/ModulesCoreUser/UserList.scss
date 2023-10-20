@@ -1,0 +1,383 @@
+/* universal */
+
+.text-center{
+  text-align: center !important;
+}
+
+.p-0{
+  padding: 0 !important;
+}
+
+.flex-column{
+  flex-direction: column !important;
+}
+.text-right{
+  text-align: right;
+}
+.justifyBetween{
+  justify-content: space-between !important;
+}
+// .MuiInputLabel-animated{
+//   font-size: 18px !important;
+//   padding-left: 1px;
+// }
+
+.btnsLeft{
+  display: flex;
+  justify-content: flex-end;
+  gap:20px;
+  @media (max-width: 576px) {
+    gap:20;
+    justify-content: center;
+    button{
+      min-width: 100px !important;
+      font-size: 16px;
+    }
+  }
+}
+
+.txt-ellipses{
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+
+/* universal */
+
+.mainUserDiv{
+  .admin_content {
+    .admin_heading {
+      display: flex;
+      align-items: center;
+      
+      
+      .heading_buttons{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+        .uploadCSVbtn{
+          margin: 0;
+        }
+        .btnClear{
+          background-color: transparent;
+          color: #F79C30 ;
+          border:2px solid #F79C30;
+          border-radius: 10px;
+          padding: 0 20px !important;
+          box-shadow: none;
+          font-size: 20px;
+        }
+      }
+    }
+    
+    
+  }
+  
+  // .acc_heading {
+  //   text-align: left;
+  // }
+
+  /* For User Table*/
+
+  .usercsc_accordian{
+    .minHeight-60vh{
+      min-height: 60vh;
+
+      .modelUserPic{
+        width: 400px;
+        position: absolute;
+        bottom: 0;
+        right: 200px;
+        @media (max-width:992px) {
+          width: 300px;
+          right: 50%;
+          transform: translateX(50%);
+        }
+        
+      }
+      
+    }
+    .CSVTable{
+      box-shadow: none;
+      .titleCsv{
+        display: none;
+      }
+      .subtitleCsv{
+        display: none;
+      }
+      .tableHeader{
+        margin-left: 0;
+        margin-right: 0;
+        .col, .col-1{
+            border-bottom: 1px solid var(--SupCloudy);
+      
+            small{
+                font-weight: 600;
+                font-size: 1rem;
+            }
+        }
+      }      
+      .tblRows{
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border: none;
+        border-bottom: 1px solid var(--SupCloudy);
+        .indexAvtar{
+          background-color: transparent;
+          color: var(--NSupText);
+          font-size: 1rem;
+        }
+        .chkboxUserCSVPreview.Mui-checked{
+          color: var(--NSupText) !important;
+        }
+        
+      }
+      
+    }
+  }
+
+  .account-grid {
+    .Mui-checked{
+      color: var(--NSupText);
+    }
+    .MuiButtonBase-root.MuiCheckbox-root{
+      color: var(--NSupText);
+    }
+  }
+
+  .role-sec {
+    .role-checkbox {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 20px;
+
+      .MuiIconButton-label {
+        color: var(--NSupText);
+      }
+
+      .MuiFormControlLabel-root {
+        .Mui-checked {
+          ~ .MuiTypography-body1 {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .hideUserList {
+    display: none;
+  }
+  .showUserList {
+    display: block;
+  }
+
+}
+
+/* For User Roles Tab in TM */
+
+.Grid_container{
+  flex-grow: 1 ;
+  justify-content: space-between; 
+  gap:20px;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  margin-top: 1.2rem;
+  @media(max-width:576px){
+    flex-wrap: wrap;
+  }
+
+  .role-cards-container{
+    padding: 0;
+    .role-card{
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background-color: var(--SupCloudy);
+      position: relative;
+      z-index: 1;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;  
+      border-left: 3px solid var(--MedPurple);
+      cursor: pointer;
+      .role-card-img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 20px 0 5px;
+        filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.2));
+
+      }
+    }
+    
+    .role-card.active{
+      background-color: var(--MedPurple);
+      border-left-color: var(--Turquoise);
+      span, button{
+        color: var(--PWhite);
+      }
+    }
+  }
+
+  .role-permission-container{
+    background-color: var(--SupCloudy);
+    border-radius: 8px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    .perm-card{
+      display: flex;
+      align-items: center;
+      img{
+        width: 50px;
+        height: 50px;
+        
+      }
+      .perm-card-text{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: 30px;
+        &::before{
+          content: "";
+          border-right: 1px solid var(--PBorderDisabled);
+          position: absolute;
+          left: -15px;
+          height: 100%;
+        }
+      }
+    }
+    .perm-table{
+      @media (max-width:576px) {
+        overflow-x: scroll;
+      }
+      thead{
+        .MuiTableCell-root{
+          font-weight: 600;
+        }
+      }
+      tbody{
+        .MuiTableCell-root{
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+/* For User Roles Tab in TM */
+
+/* Responsiveness */
+
+ @media (max-width:992px) {
+  .overflow-x-scroll{
+    overflow-x: scroll;
+  }
+  .w-tab-200{
+    width: 200%;
+  }
+  .three_btn_heading{
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+ }
+
+ @media (max-width:786px) {
+  .three_btn_top{
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  .three_btn_top_inner{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .mainUserDiv{
+    .admin_content {
+      .admin_heading{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+ }
+
+  @media (max-width: 576px) {
+    .mainUserDiv{
+      .admin_content {
+        .admin_heading{
+          flex-direction: column;
+          align-items: flex-start;
+          .heading_buttons{
+            flex-direction: column;
+            gap: 10px;
+            .pri-btn-wrap{
+              justify-content: space-between;
+            }
+            .btnClear{
+              font-size: .8rem;
+              padding: 5px 12px !important;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .usercsc_accordian {
+        overflow-x: scroll;
+        .minHeight-60vh{
+          // width: 350%;
+          min-height: 54vh;
+          
+          // .modelUserPic{
+          //   width: 200px;
+          //   right: 40px;
+          // }
+        }
+      }
+      .account-grid{
+        margin-top: 0;
+        .role-sec {
+          margin-top: 0;
+        }
+      }
+      .container-fluid{
+        padding: 0;
+      }
+      
+    }
+    .filter{
+      justify-content: center !important;
+      gap: 0 !important;
+      padding: 10px !important;
+     .filterRight-sec{
+       // flex-wrap: wrap !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+     }
+     
+   }
+   .MuiDataGrid-filterForm{
+      flex-direction: column;
+      gap:30px;
+   }
+   .MuiDataGrid-main{
+     overflow-x: scroll !important;
+    //  .Mui-resizeTriggers{
+    //    width: 300% !important;
+    //  }
+   }
+   .w-tab-200 {
+      width: 350%;
+  }
+  }
+
+/* Responsiveness */
+
+
+
+/*---------------end table------------------*/

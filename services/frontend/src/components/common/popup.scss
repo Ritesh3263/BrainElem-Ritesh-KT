@@ -1,0 +1,30 @@
+.popupDelete{
+    .MuiDialog-paper{
+        background-color: var(--PWhite);
+        padding: 20px 40px;
+        border-radius: 16px;
+        @media (max-width:576px) {
+            padding: 20px 20px;
+        }
+        .popupTitle{
+            color: var(--MedPurple);
+            font-size: 40px;
+            @media (max-width:576px) {
+                font-size: 30px;
+            }
+        }
+        
+        .popupDescription{
+            text-align: center;
+            font-size: 20px;
+            padding: 0 25px;
+            color: var(--NSupText);
+        }
+        // .card-btns{
+        //     @media (max-width:476px) {
+        //         flex-direction: column;
+        //     }
+            
+        // }
+    }
+}

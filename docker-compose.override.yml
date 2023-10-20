@@ -1,0 +1,99 @@
+version: "3.6"
+services:
+
+  proxy:
+    ports:
+      - "8090:8080"
+    command:
+      # Enable Docker in Traefik, so that it reads labels from Docker services
+      - --providers.docker
+      # Add a constraint to only use services with the label for this stack
+      # from the env var TRAEFIK_TAG
+      - --providers.docker.constraints=Label(`traefik.constraint-label-stack`, `${TRAEFIK_TAG?Variable not set}`)
+      # Do not expose all Docker services, only the ones explicitly exposed
+      - --providers.docker.exposedbydefault=false
+      # Disable Docker Swarm mode for local development
+      # - --providers.docker.swarmmode
+      # Enable the access log, with HTTP requests
+      - --accesslog
+      # Enable the Traefik log, for configurations and errors
+      - --log
+      # Enable the Dashboard and API
+      - --api
+      # Enable the Dashboard and API in insecure mode for local development
+      - --api.insecure=true
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.${STACK_NAME?Variable not set}-traefik-public-http.rule=Host(`${DOMAIN?Variable not set}`)
+      - traefik.http.services.${STACK_NAME?Variable not set}-traefik-public.loadbalancer.server.port=80
+
+  frontend:
+    build:
+      context: ./services/frontend
+      args:
+        FRONTEND_ENV: development
+        BACKEND_URL: http://localhost
+    stdin_open: true
+    command: ["npm", "start"]
+    volumes:
+      - ./services/frontend/src:/app/src
+      - ./services/frontend/public/index.html:/app/public/index.html
+      - ./services/frontend/public/img:/app/public/img
+      - ./services/frontend/public/locales:/app/public/locales
+
+    labels:
+      - traefik.enable=true
+      - traefik.constraint-label-stack=${TRAEFIK_TAG?Variable not set}
+      - traefik.http.routers.${STACK_NAME?Variable not set}-frontend-http.rule=Path(`/`) || PathPrefix(`/`) && PathPrefix(`/{api:([^a]|a[^p]|ap[^i])}`) && PathPrefix(`/{api:([^d]|d[^o]|do[^c]|doc[^s])}`) && PathPrefix(`/{socket:([^s]|s[^o]|so[^c]|soc[^k]|sock[^e]|socke[^t])}`)
+      - traefik.http.services.${STACK_NAME?Variable not set}-frontend.loadbalancer.server.port=80
+
+  backend:
+    build:
+      context: ./services/backend
+      args:
+        BACKEND_ENV: ${BACKEND_ENV-development}
+    volumes:
+      - ./services/backend/app:/app/app
+      - ./services/backend/tests:/app/tests
+      - ./services/backend/public/:/app/public
+      - ./services/backend/server.js:/app/server.js
+      - ./services/backend/index.js:/app/index.js
+    environment:
+      - BACKEND_ENV=${BACKEND_ENV-development}
+      - ELIA_BLOCKCHAIN_URL=http://65.108.147.12:30300
+    #command: bash -c "while true; do sleep 1; done"  # Infinite loop to keep container live doing nothing
+    command: ["npm", "run", "start"]
+    labels:
+      - traefik.enable=true
+      - traefik.constraint-label-stack=${TRAEFIK_TAG?Variable not set}
+      - traefik.http.routers.${STACK_NAME?Variable not set}-backend-http.rule=PathPrefix(`/api`) || PathPrefix(`/docs`) || PathPrefix(`/socket.io`)
+      - traefik.http.services.${STACK_NAME?Variable not set}-backend.loadbalancer.server.port=80
+
+
+  search-engine-interface:
+    ports:
+      - 5601:5601
+
+  database-interface:
+    ports:
+      - "8081:8081"
+    build:
+      context: ./services/database-interface 
+      args:
+        BACKEND_ENV: ${BACKEND_ENV-development}
+
+  task-executor:
+    image: elia/task-executor
+    build:
+      context: ./services/task-executor
+      args:
+        BACKEND_ENV: ${BACKEND_ENV-development}
+    volumes:
+      - ./services/task-executor/task-executor.js:/app/task-executor.js
+      - ./services/task-executor/tasks:/app/tasks
+      - ./services/task-executor/models:/app/models
+    command: ["npm", "run", "start"]
+
+networks:
+  traefik-public:
+    external: false

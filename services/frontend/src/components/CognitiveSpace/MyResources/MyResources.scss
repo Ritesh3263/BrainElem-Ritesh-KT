@@ -1,0 +1,260 @@
+// .swiper {
+//     width: 90%;
+//     height: 100%;
+//     position: static !important;
+// }
+
+// .swiper-slide {
+//     text-align: center;
+//     font-size: 18px;
+//     background: var(--PWhite);
+
+//     /* Center slide text vertically */
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .swiper-slide img {
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
+legend{
+    width: 0;
+}
+.status-dd{
+    // transform: scale(0.7) translateX(-1rem);
+    text-transform: capitalize;
+    background-color: var(--PWhite);
+    .MuiOutlinedInput-root{
+        font-size: 1rem ;
+        height: 2rem;
+      }
+  
+}
+.carousel_item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    img{
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    // .navigation_button {
+    //     position: absolute;
+    //     top: 50%;
+    //     z-index: 9999;
+    //     background-color: var(--SupCloudy);
+    //     border-radius: 50%;
+    //     height: 32px;
+    //     width: 32px;
+    //     color: var(--NSupText);
+    //     padding: 7px;
+
+    //     &.next {
+    //         left: 0px;
+    //     }
+
+    //     &.prev {
+    //         right: 0px;
+    //     }
+    // }
+
+    .item_content {
+        background-color: var(--SupCloudy);
+        padding: 17px;
+        min-height: 185px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+.carousel_para{
+    text-align: left;
+    font-size: 17px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+.helpSec {
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
+
+    .imagerobo {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        background-color: var(--PWhite);
+        @media (max-width: 576px) {
+            height: 90px;
+            width: 90px;
+        }
+    }
+
+    .right_sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 576px) {
+            margin-top: 25px;
+        }
+
+        .btnprim {
+            margin-right: 15px;
+        }
+    }
+}
+.myResources_verticleTabs{
+    min-width: 220px;
+    border-right: 1px solid var(--PBorderColor);
+    padding-right: 10px;
+    button{
+        align-items: end;
+        &.Mui-selected{
+            background-color: var(--MedPurple);
+            border-radius: 12px;            
+            h3{
+                color: var(--PWhite);
+            }
+        }
+    }
+    // .MuiTab-labelIcon{
+    //     display: flex;
+    //     flex-direction: row;
+    //     align-items: start;
+    //     justify-content: flex-start;
+    //     gap: 12px;
+    //     text-align: left;
+    //     padding: 14px 16px;
+    //     margin-bottom: 8px;
+    //     .typo_h3 {
+    //         text-transform: capitalize;
+    //         font-weight: 500;
+    //         font-size: 16px;
+    //         color: var(--NSupText);
+    //     }
+    //     svg{
+    //         width: 26px;
+    //     }
+    //     &.Mui-selected{
+    //         background-color: var(--PWhite);
+    //         border-left: 3px solid var(--MedPurple);
+    //         border-top-left-radius: 10px;
+    //         border-bottom-left-radius: 10px;
+    //         svg{
+    //             path{
+    //                 fill: var(--MedPurple);
+    //             }
+    //         }
+    //         .typo_h3{
+    //             color: var(--MedPurple);
+    //         }
+    //     }
+    // }
+    .MuiTabs-indicator{
+        display: none;
+    }
+}
+.myResources_tabPanel{
+    width: calc(100% - 220px);
+    background-color: var(--PWhite);
+}
+.top_heading{
+    display: flex;
+}
+.three-line-only{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.three-line-only:hover{
+    -webkit-line-clamp: 10;
+}
+
+.badge-dia{
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+}
+.badge-dia1{
+    background-color: var(--badgeDia1);
+}
+.badge-dia2{
+    background-color: var(--badgeDia2);
+}
+.badge-dia3{
+    background-color: var(--badgeDia3);
+}
+
+
+//Responsiveness//
+
+@media (max-width: 700px) {
+    .box-mb-col{
+      flex-direction: column;
+      border-radius: 10px;
+    }
+    .MuiTabs-flexContainer{
+        display: flex;
+        // justify-content: space-between;
+        flex-direction: row;
+    }
+    .verticle_tabs .MuiTab-labelIcon{
+        background-color: var(--PBorderColor);
+        border-radius: 10px;
+        padding: 10px !important;
+        min-height: fit-content;
+        align-items: center;
+        // width: 100%;
+        // max-width: 100%;
+    }
+    .img_resource{
+        img{
+            height: auto !important;
+        }
+    }
+    .myResources_verticleTabs .MuiTabs-flexContainer{
+        flex-direction: column;
+    }
+    .myResources_verticleTabs button{
+        align-items: flex-start;
+    }
+    .verticle_tabs .MuiTab-labelIcon svg{
+        width: 15px !important;
+    }
+    .verticle_tabs .MuiTab-labelIcon .typo_h3{
+        font-size: 12px !important;
+    }
+    .verticle_tabs .MuiTab-labelIcon.Mui-selected{
+        border-radius: 10px;
+    }
+    .myResources_tabPanel{
+        width: 100% !important;
+        border-radius: 10px;
+    }
+    .mb-col{
+        flex-direction: column;
+    }
+    .img_robot{
+        margin: 0;
+    }
+    .mySwiper{
+        .swiper-slide{
+            width: 100% !important;
+        }
+    }
+    .box-resource{
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

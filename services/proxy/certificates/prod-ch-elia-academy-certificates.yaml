@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: elia-prod-certificates
+  namespace: prod
+spec:
+  # Secret names are always required.
+  secretName: elia-prod-certificates
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  dnsNames:
+    - ch.elia.academy
+    - ch.database-interface.elia.academy
+    - ch.search-engine-interface.elia.academy
+  # Issuer references are always required.
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer

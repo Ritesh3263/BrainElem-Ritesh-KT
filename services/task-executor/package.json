@@ -1,0 +1,30 @@
+{
+  "name": "elia-backend",
+  "version": "1.0.0",
+  "description": "ELiA task executor",
+  "main": "task-executor.js",
+  "scripts": {
+    "start": "nodemon ./task-executor.js"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "bezkoder",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "handlebars": "^4.7.7",
+    "moment-timezone": "^0.5.43",
+    "mongoose": "^5.9.1",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.5.0",
+    "textract": "^2.5.0",
+    "@sendgrid/mail": "7.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

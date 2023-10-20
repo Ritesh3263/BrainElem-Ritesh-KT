@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elia-message-broker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elia-message-broker
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: elia-message-broker
+    spec:
+      securityContext:
+         runAsUser: 0
+      volumes:
+        - name: message-broker-pv-storage
+          persistentVolumeClaim:
+            claimName: message-broker-pv-claim
+      containers:
+        - image: elia-message-broker
+          name: elia-message-broker
+          volumeMounts:
+          - mountPath: "/bitnami"
+            name: message-broker-pv-storage
+          envFrom:
+            - configMapRef:
+                name: elia-message-broker
+            - secretRef:
+                name: elia-main-secret
+          resources: {}
+      restartPolicy: Always

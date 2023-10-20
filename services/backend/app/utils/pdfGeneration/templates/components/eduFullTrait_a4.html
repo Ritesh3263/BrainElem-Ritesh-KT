@@ -1,0 +1,19 @@
+<div class="page-padding">
+	<div class="flexing-horizontal align-center">
+		<h2 class="m-bold purple space-right-24">{{ getTraitByKey @root currentTrait "shortName" }}</h3>
+		<div class="scoreCircle"><h3 class="score white m-bold">{{ getTraitByKey @root currentTrait "normalizedValue" }}</h3></div>
+	</div>
+	<h6 class="pad-16">{{ getTraitByKey @root currentTrait "description" }}</h6>
+	<div class="flexing-horizontal iconTitle align-center">
+		<img class="space-right-8" src="https://cloud.braincore.ch/s/HwJeBEmZRwAFRqe/preview" alt=""/>
+		<h4 class="m-bold pink">{{ staticT.meaning }}</h4>
+	</div>
+	<p class="pad-16">{{ getProperDescription @root currentTrait }}</p>
+	<div class="flexing-horizontal iconTitle align-center">
+		<img class="space-right-8" src="https://cloud.braincore.ch/s/dDK3knF9XTs7KXB/preview" alt=""/>
+		<h4 class="m-bold pink">{{ staticT.develop }}</h4>
+	</div>
+	<ol class="pad-16">
+		{{readHtmlInside (stripWhitespacesFromString (getTraitByKey @root currentTrait "extra")) }}
+	</ol>
+</div>

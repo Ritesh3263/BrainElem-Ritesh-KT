@@ -1,0 +1,28 @@
+
+## All
+
+1.Copy from exel
+
+2. Replace `"` with `'`
+
+3. Replace
+
+^\s*([a-zA-Z0-9-]+)\s*
+"$1": "
+
+^([^\s].*?)(\n)
+$1",\n
+
+
+
+## Other
+
+Remove all values(for POLISH)
+: ".*\n
+: "",\n
+
+
+
+Remove descriptions for QNAD:
+"current-performance-indicator-.*part-3.*
+"current-performance-indicator-.*part-2.*

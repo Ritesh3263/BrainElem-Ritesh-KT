@@ -1,0 +1,81 @@
+.MuiPickersToolbar-content {
+    display: none;
+}
+.MuiDialog-paper{
+    padding: 16px;
+}
+.MuiCalendarOrClockPicker-root{
+    .MuiPickersToolbar-root{
+        padding: 0 0 16px 0;
+    }
+}
+.MuiCalendarPicker-root{
+    border: 1px solid var(--NSIconBorder);
+    border-radius: 16px;
+    .MuiDayPicker-weekContainer{
+        margin-top: 4px;
+        margin-bottom: 4px;
+        .MuiPickersDay-root{
+            background-color: var(--SupCloudy);
+            border-radius: 8px;
+            color: var(--NSupText);
+            font-weight: 500;
+            border: 2px solid var(--SupCloudy);
+            &:hover{
+                border-color: var(--Turquoise);
+                color: var(--Turquoise);
+            }
+            &.Mui-disabled{
+                background-color: transparent;
+                color: var(--TextDisabled);
+                border-color: transparent;
+            }
+            &.MuiPickersDay-today{
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    height: 4px;
+                    width: 4px;
+                    border-radius: 50%;
+                    background-color: var(--MedPurple);
+                    bottom: 3px;
+                    left: 50%;
+                }
+            }
+            &.Mui-selected{
+                background-color: var(--MedPurple);
+                color: var(--PWhite);
+                border-color: var(--MedPurple);
+            }
+        }
+    }
+    .MuiPickersCalendarHeader-label{
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--NSupText);
+    }
+    .MuiPickersArrowSwitcher-button{
+        color: var(--DarkPurple);
+        &.Mui-disabled{
+            color: var(--TextDisabled);
+        }
+    }
+    .MuiPickersCalendarHeader-switchViewButton{
+        color: var(--DarkPurple);
+    }
+    .MuiCalendarPicker-viewTransitionContainer{
+        .PrivatePickersYear-yearButton{
+            background-color: var(--SupCloudy);
+            border-radius: 8px;
+            color: var(--NSupText);
+            border: 1px solid transparent;
+            font-weight: 500;
+            &.Mui-selected{
+                background-color: var(--MedPurple);
+                border-color: var(--MedPurple);
+                color: var(--PWhite);
+            }
+        }
+    }
+}

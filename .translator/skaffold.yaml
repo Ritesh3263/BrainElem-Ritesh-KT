@@ -1,0 +1,19 @@
+apiVersion: skaffold/v2beta17
+kind: Config
+
+deploy:
+  kustomize:
+    paths:
+    - k8s/base
+
+profiles:
+  - name: local
+    deploy:
+      kustomize:
+        paths:
+          - k8s/local
+  - name: prod-ch
+    deploy:
+      kustomize:
+        paths:
+          - k8s/prod/ch

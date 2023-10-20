@@ -1,0 +1,26 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namePrefix: prod-
+namespace: prod
+
+resources:
+  - ../../base
+
+patches:
+  - target:
+      kind: Ingress
+      name: elia-proxy-ingress-frontend
+    path: ingress-frontend-patch.json
+  - target:
+      kind: Ingress
+      name: elia-proxy-ingress-backend
+    path: ingress-backend-patch.json
+  - target:
+      kind: Ingress
+      name: elia-proxy-ingress-database-interface
+    path: ingress-database-interface-patch.json
+  - target:
+      kind: Ingress
+      name: elia-proxy-ingress-search-engine-interface
+    path: ingress-search-engine-interface-patch.json

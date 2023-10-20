@@ -1,0 +1,50 @@
+{ 
+ "Login": "Login",
+ "Not Found": "Not Found", 
+ "Close": "Close",
+ "welcomePageMessage": "Create new lessons and tests. To upload already existing content(SCORM, PDF etc) click on `Upload external resource`",
+ "contact_us":  "In case of any problems, plese contact us at:",
+ "wish":  "We wish you a smooth learning :)",
+ "My Space":"My Space",
+ "COOKIES_HEADER": "Cookies",
+ "COOKIES_TEXT": "This service uses functional cookies systematically to ensure BrainCore Solutions can provide you with a secure use of this website. Cookies are small files or pieces of text that are downloaded to your browser when a visitor accesses a website or application.",
+
+ "POWERED BY BRAINELEM": "Powered by BrainElem",
+
+
+ "-----------EDU TRANSLATIONS FROM IRKA ": "SHOULD BE USED WITH `F_t` function for load translation with EDU_ prefix",
+ "//Accueil": "@@@",
+ "EDU_Admin": "Admin",
+ "EDU_My Teams":"My Classes",
+ "EDU_My Users":"My Students",
+ "EDU_My Trainings": "My Subjects",
+ "//Authorization": "@@@",
+ "//Liste de rôle": "@@@@",
+ "View": "View",
+ "Permisssion": "Permission",
+ "Action": "Action",
+ "Select Permissions": "Select permissions",
+
+ "EDU_Teams":"Classes",
+ "EDU_Team":"Class",
+
+ "EDU_Team Name": "Class name",
+ "EDU_Create Team": "Add a class",
+ "EDU_Total Users":"Number of students",
+ "EDU_Enter Team Name": "Enter class name",
+ "Added on": "Added on",
+ "Last Active on": "Last active",
+ "Projects": "Projects",
+
+
+
+
+ "EDU_Users":"Users",
+ "Automated Projects": "Automated Projects",
+ "EDU_About team": "About  class",
+ "EDU_Are you sure you want to discard Create Team?": "Are you sure you want to discard creating class",
+ "EDU_Edit Team": "Edit class",
+ "EDU_Removing Team":"Removing class",
+ "EDU_Are you sure you want to remove Team? The action is not reversible!": "Are you sure you want to remove the class? The action is not reversible!"
+
+}

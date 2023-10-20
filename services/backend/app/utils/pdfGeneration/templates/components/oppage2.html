@@ -1,0 +1,40 @@
+<div class="main-container">
+	<div class="layout-top-pic"><img src="https://cloud.braincore.ch/s/spM6kkcwJ78sogt/preview" alt="" /></div>
+	<header class="page-padding head-cont traits-head">	
+		<div class="titles">
+			<h2 class="mpurp uppers" data="trait_category">{{pages.[8].staticTexts.areasOfDevelopment}}</h2>
+			<h1 class="dpurp" data="trait_name">{{nadlabel}}</h1>
+			<h6 data="nad_description">{{section}}</h6>
+		</div>
+		<div class="icon trait-ico">
+			<img data="nad_icon_url" src="{{getNadDetails img}}" alt="nad-icon"/>
+		</div>
+	</header>
+	<div class="page-padding wide-description">{{intro}}</div>
+	<main>
+		<div class="areas-container page-padding short-container">
+			{{#each opps }}
+			<div class="solution-pair">
+				<div class="opp-txt">
+					<p class="p-solutions white">{{this.text}}</p>
+				</div>
+				<div class="sol-txt">
+					<p class="p-solutions">
+					{{#each this.solutions}} {{this.text}} <br/>{{/each}}</p>
+					<div class="sol-mark"></div>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</main>
+	<footer class="page-padding">
+    <div class="logo-foot">
+		<img src="https://cloud.braincore.ch/s/sZiK53D5tRF3ipP/preview" alt="BrainCore Logo"/>
+	</div>
+    <div class="footing white">
+        <span class="f-small" data="date">{{ formatDate pages.[0].date "DD.MM.yyyy" ""}}</span>
+        <span class="f-small r-bold" data="username">{{ getUserForFooter pages.[0].user}}</span>
+        <span class="f-small" data="page_number">{{currentPage}}/{{totalPages}}</span>
+    </div>
+	</footer>
+</div>

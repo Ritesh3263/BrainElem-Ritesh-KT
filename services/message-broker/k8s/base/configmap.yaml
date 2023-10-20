@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-message-broker
+data:
+  RABBITMQ_DEFAULT_USER: root
+  RABBITMQ_LOGS: "-"

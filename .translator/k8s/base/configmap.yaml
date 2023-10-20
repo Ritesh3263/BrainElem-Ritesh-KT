@@ -1,0 +1,7 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: libretranslate-config
+data:
+  langs: "de,it,en,fr"

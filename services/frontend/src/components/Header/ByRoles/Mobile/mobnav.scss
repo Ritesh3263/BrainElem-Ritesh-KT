@@ -1,0 +1,23 @@
+@import url("../../../../scss/_variables.scss");
+
+.header_top {
+    display: flex;
+    align-items: center;
+    background-color: var(--MedPurple);
+    padding: 10px 0;
+}
+
+.list_item_button {
+    border-bottom: 1px solid #e5e5e5 !important;
+    margin: 0 10px !important;
+
+    .list_item_text {
+        border-left: 3px solid var(--MedPurple);
+        padding-left: 10px;
+
+        span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+}

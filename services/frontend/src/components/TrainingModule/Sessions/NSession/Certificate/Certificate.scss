@@ -1,0 +1,37 @@
+.tabing_btns {
+  button {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid var(--SupCloudy);
+    border-radius: 0;
+    padding: 4px 66px !important;
+    &:hover {
+      background: transparent;
+      box-shadow: none;
+    }
+    span {
+      font-weight: 500;
+    }
+    &[class*="MuiButton-containedPrimary"] {
+      box-shadow: none;
+      &:hover {
+        background: transparent;
+      }
+      span {
+        color: var(--MedPurple);
+        font-weight: 700;
+      }
+      border-color: var(--MedPurple);
+    }
+  }
+}
+.student_list_item {
+  padding: 0;
+}
+
+.avtar_main_details{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}

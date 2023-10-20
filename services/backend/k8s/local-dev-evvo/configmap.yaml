@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-backend
+data:
+  BACKEND_ENV: development
+  MESSAGE_BROKER_HOST: local-dev-evvo-elia-message-broker.local-dev-evvo.svc.cluster.local
+  SEARCH_ENGINE_HOST: local-dev-evvo-elia-search-engine.local-dev-evvo.svc.cluster.local
+  #DATABASE connection
+  DATABASE_HOST: local-dev-evvo-elia-database.local-dev-evvo.svc.cluster.local
+
+  ELIA_ALGORITHMS_URL: https://evvo:algorithms-evvo-password@algorithms.elia.academy
+  ELIA_BLOCKCHAIN_URL: http://local-dev-evvo-elia-blockchain-api.local-dev-evvo.svc.cluster.local:3000

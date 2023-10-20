@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-backend
+data:
+  BACKEND_ENV: production
+  MESSAGE_BROKER_HOST: prod-elia-message-broker.prod.svc.cluster.local
+  SEARCH_ENGINE_HOST: prod-elia-search-engine.prod.svc.cluster.local
+  #DATABASE connection
+  DATABASE_HOST: prod-elia-database.prod.svc.cluster.local
+
+  ELIA_ALGORITHMS_URL: http://prod-elia-algorithms.prod.svc.cluster.local:5000
+  ELIA_BLOCKCHAIN_URL: http://prod-elia-blockchain-api.prod.svc.cluster.local:3000

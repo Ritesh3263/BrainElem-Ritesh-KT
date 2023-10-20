@@ -1,0 +1,121 @@
+@import url("../../scss/_colors.scss");
+
+.sticky-top {
+  background-color: var(--PWhite);
+  z-index: 1;
+  .main_navigation_container{
+    padding-left: 32px;
+    padding-right: 32px;
+    @media (max-width: 1120px){
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  &.border_top {
+    border-top: 6px solid var(--MedPurple);
+  }
+  .top_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 92px;
+    @media (max-width: 1024px){
+      height: 56px;
+    }
+    .header_logo{
+      height: 100%;
+      margin-top: -5px;
+    }
+    .logo {
+      img {
+        width: 200px;
+        min-width: 100px;
+        @media (max-width: 1024px){
+          width: 150px;
+        }
+      }
+    }
+    .right_sec {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      flex-direction: row;
+      gap: 6px;
+      height: 100%;
+      margin-top: -5px;
+      .user_name {
+        margin-right: 8px;
+        span{
+            font-size: 12px;
+            text-align: right;
+            overflow: hidden; 
+            max-height: 50px;
+            color: var(--NSupText);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 170px; 
+            max-width: 120px;
+            display: block;
+            font-weight: 600;
+            @media (max-width: 600px){
+              max-width: 70px;
+            }
+        }
+      }
+      
+      // .profile_icon {
+      //   cursor: pointer;
+      //   img {
+      //     height: 38px;
+      //     width: 38px;
+      //     @media (max-width:600px){
+      //       height: 30px;
+      //       width: 30px;
+      //     }
+      //   }
+      // }
+      .Notification_icon {
+        cursor: pointer;
+        height: 35px;
+        width: 35px;
+        // @media (max-width:600px){
+        //   height: 30px;
+        //   width: 30px;
+        // }
+      }
+      // .cart_icon{
+      //   cursor: pointer;
+      //   height: 38px;
+      //   width: 38px;
+      //   @media (max-width:600px){
+      //     height: 30px;
+      //     width: 30px;
+      //   }
+      // }
+    }
+  }
+}
+.menuTxt{
+  span{
+    font-size: 16px ;
+  }
+}
+
+.switch-role{
+  .Mui-selected{
+    opacity: 1 !important;
+    background-color: var(--MedPurple) !important;
+    span{
+      color: var(--PWhite) !important;
+    }
+  }
+  .role-txt{
+    span{
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+}
+.nav-shadow{
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+}

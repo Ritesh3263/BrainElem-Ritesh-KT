@@ -1,0 +1,11 @@
+exports.contentFile = [
+    {
+        _id: '64b6731b6c2f4e003a5b9b39',
+        fileName: 'BrainCoreCoach.pdf',
+        fileOriginalName: 'Trainer Lesson Plan Template.pdf',
+        mimeType: 'application/pdf',
+        size: 1005487,
+        createdAt: '2023-07-18T11:10:19.836Z',
+        updatedAt: '2023-07-18T11:10:19.836Z',
+    }
+]

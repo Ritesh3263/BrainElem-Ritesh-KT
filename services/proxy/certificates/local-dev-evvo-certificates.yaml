@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: elia-local-dev-evvo-certificates
+  namespace: local-dev-evvo
+spec:
+  # Secret names are always required.
+  secretName: elia-local-dev-evvo-certificates
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  dnsNames:
+    - local.dev.evvo.elia.academy
+    - local.dev.evvo.database-interface.elia.academy
+    - local.dev.evvo.search-engine-interface.elia.academy
+  # Issuer references are always required.
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer

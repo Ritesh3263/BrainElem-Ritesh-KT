@@ -1,0 +1,11 @@
+{
+    "COMPARE_TEAMS": "Comparer",
+    "SELECT_TEAMS_TO_COMPARE": "Choisissez deux équipes dans la liste ci-dessous pour comparer leurs valeurs NAD :",
+    "SELECT_TEAM": "Sélectionner une équipe",
+    "NO_RESULTS": "Aucun résultat n'est disponible pour l'affichage. Pour générer un graphique, nous avons besoin de deux équipes contenant au moins un membre avec des résultats au test BrainCore.",
+    "{{NUMBER_OF_TEAM_MEMBERS_WITH_RESULT}}/{{NUMBER_OF_TEAM_MEMBERS}} MEMBRES": "{{NUMBER_OF_TEAM_MEMBERS_WITH_RESULT}}/{{NUMBER_OF_TEAM_MEMBERS}} membres",
+
+    "EDU_SELECT_TEAMS_TO_COMPARE": "Choisissez deux classes dans la liste ci-dessous pour comparer leurs valeurs NAD :",
+    "EDU_SELECT_TEAM":"Sélectionner une classe",
+    "EDU_NO_RESULTS": "Aucun résultat n'est disponible pour l'affichage. Pour générer un graphique, nous avons besoin de deux classes contenant au moins un etudiant avec des résultats au test BrainCore."
+}

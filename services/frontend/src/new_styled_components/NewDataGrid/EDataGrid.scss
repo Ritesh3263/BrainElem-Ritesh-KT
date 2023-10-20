@@ -1,0 +1,226 @@
+.temaList_table {
+    .MuiDataGrid-columnHeaders {
+        .MuiDataGrid-columnHeaderTitle {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: var(--NSupText);
+        }
+    }
+
+    .MuiDataGrid-main {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .MuiDataGrid-virtualScrollerContent {
+        .MuiDataGrid-row {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+
+            &:nth-of-type(odd) {
+                background-color: var(--PBorderColor);
+            }
+
+            .MuiDataGrid-cellContent {
+                color: var(--NSupText);
+                font-weight: 500;
+            }
+
+            .user-color {
+                color: var(--PLinkBlue);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.filter {
+    background: var(--SupCloudy);
+    border-bottom: 1px solid var(--PBorderColor);
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    .filterRight-sec {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 16px 0;
+        
+        @media (max-width:768px) {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width:576px) {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+    }
+    
+    .fiterText {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .MuiOutlinedInput-notchedOutline {
+        border: 1px solid var(--PBorder);
+        border-radius: 8px;
+        legend{
+            width: 0;
+        }
+    }
+
+    .MuiInputBase-input {
+        max-width: 200px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--PBlackLight2);
+    }
+
+    .MuiFormControl-root {
+        margin: 0;
+        max-width: 200px;
+        .MuiOutlinedInput-root{
+            gap:5px;
+            input::placeholder{
+                color: var(--NSupText);
+                opacity: 1;
+            }
+            
+        }
+    }
+    
+}
+
+.MuiDataGrid-filterForm{
+    gap: 15px;
+    padding: 8px 15px;
+    .MuiDataGrid-filterFormDeleteIcon{
+        justify-content: center;
+    }
+    .MuiDataGrid-filterFormColumnInput, .MuiDataGrid-filterFormOperatorInput, .MuiDataGrid-filterFormValueInput{
+        border: 1px solid #e7e9ea;
+        border-radius: 10px 10px 0px 0px;
+        label{
+            top: 5px;
+            left: 8px;
+            
+        }
+        
+        input, select{
+            padding-left: 8px;
+
+        }
+        .MuiInput-underline::before{
+            border-bottom: 1px solid var(--MedPurple) !important;
+        }
+    }
+    @media (max-width:576px) {
+        flex-direction: column;
+        gap: 15px;
+        .MuiFormControl-root{
+            width: 100%;
+        }
+    }
+    
+}
+
+.MuiDataGrid-panelWrapper{
+    .MuiDataGrid-panelHeader{
+        .MuiFormControl-root{
+            border: 1px solid #e7e9ea;
+            border-radius: 10px 10px 0px 0px;
+            .MuiInput-underline::before{
+                border-bottom: 1px solid var(--MedPurple) !important;
+            }
+            label{
+                
+                left: 8px;
+            }
+            .MuiInputLabel-shrink{
+                top: 5px;
+            }
+            input{
+                padding-left: 8px;
+            }
+        }
+    }
+    .MuiDataGrid-panelContent{
+        label{
+            span.MuiSwitch-root{
+                width: 46px;
+                .MuiSwitch-thumb{
+                    position: absolute;
+                    padding: 0;
+                    top: 7px;
+                    left: 7px;
+                }
+                .MuiSwitch-track{
+                    height: 16px;
+                    border-radius: 10px;
+                    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+            span.Mui-checked{
+                +.MuiSwitch-track{
+                    background-color: var(--MedPurple) ;
+                    opacity: 1;
+                }
+                .MuiSwitch-thumb{
+                    color: var(--PWhite);
+                    border: 1px solid var(--MedPurple);
+                }
+                
+            }
+            // .MuiSwitch-switchBase{
+            //     .Mui-checked:hover{
+            //         box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+            //     }
+            // }
+        }
+    }
+    .MuiDataGrid-panelFooter{
+        button:first-child{
+            color: var(--DarkPurple);
+            border: 1px solid var(--DarkPurple);
+            background-color: transparent;
+        }
+        button:first-child:hover{
+            color: var(--PWhite);
+            background-color: var(--DarkPurple);
+            background: var(--DarkPurple);
+        }
+        button:last-child{
+            color: var(--DarkPurple);
+            background-color: var(--Turquoise);
+            background: var(--Turquoise);;
+        }
+        button:last-child:hover{
+            color: var(--PWhite);
+            background-color: var(--DarkPurple);
+            background: var(--DarkPurple);
+        }
+    }
+
+}
+
+::ng-deep .Mui-focused{
+    color: var(--MedPurple) !important;
+}

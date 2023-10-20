@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: test
+namePrefix: test-
+
+resources:
+  - ../base
+
+patchesStrategicMerge:
+  - configmap.yaml
+
+patches:
+  - target:
+      kind: Deployment
+      name: elia-backend
+    path: deploy-patch.json

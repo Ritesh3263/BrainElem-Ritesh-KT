@@ -1,0 +1,68 @@
+<!-- =========== NAD Intro =========== -->
+<div class="mainFrame bgTraitCover">
+	<header class="pageWrap wideFlex pad60">
+		<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+	</header>
+
+	<div class="pageWrap wideFlex h100">
+		<div class="mainCol alignPic alignVertCenter">
+			<img src='{{getEduPic (getTraitByKey @root currentNad "abbreviation")}}' alt="NAD picture"/>
+		</div>
+		<div class="mainCol justified alignVertCenter">
+			<div class="wrapTexts">
+				<div class="nadHeader">
+					<h3 class="mBold mainPurple">{{readHtmlInside (fixNadAbbreviation (getTraitByKey @root currentNad "abbreviation")) }} - {{getTraitByKey @root currentNad "shortName" }}</h3> <!--N<span>1</span> - {{ nads.n1Name }}-->
+					<div class="scoreNad"><h1 class="scoreVal white mBold">{{getTraitByKey @root currentNad "normalizedValue" }}</h1></div>
+				</div>
+				<p>{{getTraitByKey @root currentNad "description"}}</p>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="pageWrap wideFlex pad18">
+			<div class="userName"><h6> {{ currentUser.name }} {{ currentUser.surname }} <span class="uppercase mainPurple mBold">{{ userProfile }}</span></h6></div>
+			<div class="sectionTitle"><h6>{{ staticT.nadPageTitle }}</h6></div>
+			<div class="pageNumber"><h6 class="mBold">{{ getEduPageNumber nadId 0 5 2}}</h6></div>
+		</div>
+	</footer>
+</div>
+<!-- =========== NAD Page 2 =========== -->
+<div class="mainFrame bgStrong">
+	<header class="pageWrap wideFlex pad60">
+		<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+	</header>
+
+	<div class="pageWrap wideFlex h100">
+		<div class="mainCol colA justified pad37">
+			<div class="alignTextCenter w100">
+				<img src="https://cloud.braincore.ch/s/5cNpGGQoiTgwjLB/preview" alt=""/>
+				<h4 class="pink mBold">{{ staticT.nadHigh }}</h4>
+			</div>
+			<div>
+				<ol>
+					{{readHtmlInside (stripWhitespacesFromString (getTraitByKey @root currentNad "high")) }}
+				</ol>
+			</div>
+		</div>
+		<div class="mainCol colA justified pad37">
+			<div class="alignTextCenter w100">
+				<img src="https://cloud.braincore.ch/s/JwDWSRJApp2fNWq/preview" alt=""/>
+				<h4 class="pink mBold">{{ staticT.nadLow }}</h4>
+			</div>
+			<div>
+				<ol>
+					{{readHtmlInside (stripWhitespacesFromString (getTraitByKey @root currentNad "low")) }}
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="pageWrap wideFlex pad18">
+			<div class="userName"><h6> {{ currentUser.name }} {{ currentUser.surname }} <span class="uppercase mainPurple mBold">{{ userProfile }}</span></h6></div>
+			<div class="sectionTitle"><h6>{{ staticT.nadPageTitle }}</h6></div>
+			<div class="pageNumber"><h6 class="mBold">{{ getEduPageNumber nadId 1 5 2}}</h6></div>
+		</div>
+	</footer>
+</div>

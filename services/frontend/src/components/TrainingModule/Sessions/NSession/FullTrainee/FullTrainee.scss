@@ -1,0 +1,27 @@
+.box_main_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  .inner_box_item {
+    display: flex;
+    align-items: center;
+    .box_flex {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.progress_accordion_trainee{
+    &::before{
+        background-color: transparent;
+    }
+    .MuiAccordionSummary-root{
+        .Mui-expanded{
+            margin: 12px 0;
+        }
+    }
+}

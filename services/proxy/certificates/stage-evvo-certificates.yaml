@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: elia-stage-evvo-certificates
+  namespace: stage-evvo
+spec:
+  # Secret names are always required.
+  secretName: elia-stage-evvo-certificates
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  dnsNames:
+    - stage.braincore.app
+    - stage.database-interface.braincore.app
+  # Issuer references are always required.
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer

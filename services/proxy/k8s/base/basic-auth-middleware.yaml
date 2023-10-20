@@ -1,0 +1,7 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: elia-basic-auth-middleware
+spec:
+  basicAuth:
+    secret: elia-basic-auth-secret

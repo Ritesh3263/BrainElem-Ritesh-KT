@@ -1,0 +1,301 @@
+
+/* universal */
+
+/* universal */
+
+.Auth_Module {
+  .admin_content {
+    .admin_heading {
+      display: flex;
+      align-items: center;
+      .heading_buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .uploadCSVbtn {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  /* For User Table*/
+
+  .usercsc_accordian {
+    .minHeight-60vh {
+      min-height: 60vh;
+      .modelUserPic {
+        width: 400px;
+        position: absolute;
+        bottom: 0;
+        right: 200px;
+      }
+    }
+    .CSVTable {
+      box-shadow: none;
+      .titleCsv {
+        display: none;
+      }
+      .subtitleCsv {
+        display: none;
+      }
+      .tableHeader {
+        .col,
+        .col-1 {
+          border-bottom: 1px solid var(--PBorderColor);
+
+          small {
+            font-weight: 600;
+            font-size: 1rem;
+          }
+        }
+      }
+      .tblRows {
+        border: none;
+        border-bottom: 1px solid var(--PBorderColor);
+        .indexAvtar {
+          background-color: transparent;
+          color: var(--NSupText);
+          font-size: 1rem;
+        }
+        .chkboxUserCSVPreview.Mui-checked {
+          color: var(--NSupText) !important;
+        }
+      }
+      .gap-20 {
+        gap: 20px;
+        padding: 20px;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .account-grid {
+    .MuiFormControl-marginDense {
+      padding-right: 25px;
+      width: 100%;
+    }
+
+    .acc_heading {
+      text-align: left;
+    }
+  }
+
+  .userbtn {
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  .role-sec {
+    margin-top: 30px;
+    .role-checkbox {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 20px;
+
+      .MuiIconButton-label {
+        color: var(--NSupText);
+      }
+
+      .MuiFormControlLabel-root {
+        .MuiTypography-body1 {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+        }
+
+        .Mui-checked {
+          ~ .MuiTypography-body1 {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .hideUserList {
+    display: none;
+  }
+  .showUserList {
+    display: block;
+  }
+}
+
+.actionBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.tableRoleList {
+  color: var(--NSupText);
+  .MuiDataGrid-columnHeaderTitle {
+    font-size: 16px !important;
+    color: var(--NSupText);
+    font-weight: 600;
+  }
+  .tableRowContent {
+    font-size: 16px;
+  }
+  .MuiDataGrid-row:nth-child(odd) {
+    background: none;
+    background-color: var(--SupCloudy);
+  }
+}
+
+.createRoleTab {
+  display: flow-root;
+  align-items: flex-start;
+  span {
+    padding: 0 2px;
+    margin: 0;
+    margin-bottom: 1px !important;
+    span {
+      color: var(--NSupText);
+    }
+  }
+}
+.selectWrap {
+  justify-content: flex-start;
+  gap: 0 80px;
+}
+.selectGroup {
+  border: 1px solid var(--PBorderColor);
+  border-radius: 10px;
+  min-width: 230px;
+  .groupHead {
+    display: flex;
+    background-color: var(--PBorderColor);
+    margin-right: 0;
+    margin-left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .groupChild {
+    padding: 0 10px;
+  }
+}
+.side_drawer{
+  background-color: var(--PWhite);
+  max-width: 500px;
+  min-width: 500px;
+  padding: 26px;
+  justify-content: space-between;
+  .dialog_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EEEBF1;
+    padding-bottom: 8px;
+  }
+  .dialog_content {
+    overflow: auto;
+  }
+  .dialog_button {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 900px) {
+  .Auth_Module {
+    .admin_content {
+      .admin_heading{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .Auth_Module {
+    .admin_content {
+      .admin_heading {
+        flex-direction: column;
+        align-items: flex-start;
+        .heading_buttons {
+          flex-direction: column;
+          gap: 10px;
+          .pri-btn-wrap {
+            display: contents;
+          }
+        }
+      }
+    }
+    .tab_style {
+      button {
+        margin-right: 5px;
+        font-size: 0.7rem;
+        padding: 5px 10px;
+        min-width: fit-content;
+        padding: 0 15px 0 5px;
+      }
+    }
+    .usercsc_accordian {
+      overflow-x: scroll;
+      .minHeight-60vh {
+        width: 350%;
+        min-height: 54vh;
+        .modelUserPic {
+          width: 200px;
+          right: 40px;
+        }
+      }
+    }
+    .userbtn {
+      justify-content: center;
+    }
+  }
+  .txtManagePermission {
+    padding: 0;
+  }
+  .w-500 {
+    width: auto !important;
+  }
+  .cardContent {
+    padding: 0;
+  }
+  .selectWrap {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+
+/* Responsiveness */
+
+/*--------------------newpermission css---------------*/
+.permission-card {
+  box-shadow: none;
+  padding: 0;
+  .permisionForm-grid {
+      width: 100%;
+  }
+}
+
+.userbtn {
+  gap: 10px;
+}
+
+.permissionTable {
+  max-width: 100%;
+  width: 100%;
+  .MuiDataGrid-columnHeaderTitle {
+    text-transform: uppercase;
+  }
+}
+.heading {
+  margin-bottom: 40px;
+}
+
+.inline-center{
+  display: inline-flex;
+  align-items: center;
+  height: 17px;
+}

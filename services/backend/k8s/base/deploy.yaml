@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elia-backend 
+spec:
+  selector:
+    matchLabels:
+      app: elia-backend 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: elia-backend 
+    spec:
+      volumes:
+      - name: backend-public-pv-storage
+        persistentVolumeClaim:
+          claimName: backend-public-pv-claim
+      containers:
+        - name: elia-backend 
+          image: elia-backend
+          # https://stackoverflow.com/questions/55613111/kubernetes-pvc-deleting-the-contents-of-the-pod
+          # As this directory is persistent volume, all initial files are removed
+          # To prevent losing data, inside Dockerfile we make copy of this directory
+          # In deployment postStart lifecycle we copy it back
+          lifecycle: 
+            postStart:
+              exec:
+                command:
+                  - "sh"
+                  - "-c"
+                  - >
+                    if [ -z "$(ls -A /app/public)" ]; then
+                      mv /public_copy/* /app/public
+                    fi;
+                    cp /public_copy/content/images/categories/* /app/public/content/images/categories
+          volumeMounts:
+          - mountPath: "/app/public"
+            name: backend-public-pv-storage
+          ports:
+          - name: http
+            containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: elia-backend
+            - secretRef:
+                name: elia-main-secret
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
+            failureThreshold: 1
+            periodSeconds: 60
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: 80
+            failureThreshold: 10
+            periodSeconds: 15
+            timeoutSeconds: 10
+          resources: {}
+      restartPolicy: Always

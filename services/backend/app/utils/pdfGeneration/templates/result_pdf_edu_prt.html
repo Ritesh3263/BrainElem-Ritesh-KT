@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+<meta name="viewport" content="width=device-width;initial-scale=1.0; user-scalable=1;" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>BUSINESS REPORT</title>
+    
+</head>
+		
+<body>
+<!--Preheader-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font-size: 100%; 
+    font: inherit; 
+    vertical-align: baseline;
+  } 
+
+.page-padding { padding-left: 64px; padding-right: 64px; }
+
+html, body { font-family: 'Nunito Sans', sans-serif; font-size: 12pt; font-weight: 300; color: #1f252d; line-height: 1.4em; text-align: justify; background: #fff; }
+
+.main-container { display: block; position: relative; width:1050px; height:1485px; }
+
+header {position: relative; padding:32px 0 24px 32px;}
+header img {width:240px;}
+footer {position: absolute; bottom:0; width:100%; height:64px; background: transparent bottom/contain url("https://cloud.braincore.ch/s/6g2W8aKagiQnnCm/preview") no-repeat; }
+footer div p {float: right;}
+
+h1, h2, h3, h4, h5 { font-family: 'Montserrat', 'Helvetica', 'Futura', Arial, sans-serif; font-weight: 400; line-height: 1.3em; text-align: left; padding-bottom: 8px;}
+h1, 
+h2 { font-weight: 800; }
+h1 { font-size: 36pt; }
+h2 { font-size: 28pt; }
+h2.smaller { font-size: 24pt; }
+h3 { font-size: 21pt; }
+h4 { font-size: 18pt; }
+h5 { font-size: 16pt; }
+h6 { font-size: 12pt; }
+
+h1 { line-height: 1.05em;}
+h1 span {vertical-align: super; font-size: 28pt;}
+h4 span { font-size: .7em; display: block; line-height: 1.05em;}
+h1.huge {font-size: 54pt;}
+
+p { padding-bottom: 8px; }
+
+hr { border: 1px solid #29baed; padding:0; margin:0 0 8px 0; }
+
+ul { list-style-type: none; }
+ul li { margin-left: 24px; margin-bottom:4px; }
+ul li::before { position: relative; display: inline-block; content: ""; background: url('https://cloud.braincore.ch/s/X8Zja38GfeRR2SB/preview') no-repeat 0 0; background-size: 100%; width: 16px; height:16px; margin-left: -24px; margin-right:8px; top:2px; }
+ul.big-list li {margin:0 0 0 32px;}
+ul.big-list li::before { position: relative; display: inline-block; content: url('https://cloud.braincore.ch/s/X8Zja38GfeRR2SB/preview'); background: none; width: 32px; margin:0 0 0 -32px; top:6px; font-size: 28px; font-family: sans-serif; font-weight: 600; color:#D154EF;}
+
+.purple {color:#752CAF;}
+.pink {color:#D154EF;}
+.turq {color:#29baed;}
+.gray {color: #4c5157;} /* #63676c */
+.white {color:#fff;}
+
+.flexing-horizontal {position:relative; display: flex; flex-grow: 0;}
+.justify-between { justify-content: space-between; }
+.align-center { align-items: center; }
+.text-center { text-align: center; }
+.flex-fixed div {flex-shrink: 0;}
+.flex-wrapped {flex-wrap: wrap;}
+
+.col-53 {position: relative; width: 53%;}
+.col-50 {position: relative; width: 50%;}
+.col-48 {position: relative; width: 48%;}
+.col-33 {position: relative; width: 33%;}
+
+.pad-48 {padding-bottom: 48px;}
+.pad-32 {padding-bottom: 32px;}
+.pad-24 {padding-bottom: 24px;}
+.pad-16 {padding-bottom: 16px;}
+.pad-8 {padding-bottom: 8px;}
+.pad-0 {padding-bottom: 0;}
+
+.label {padding-top:28px;}
+
+.profile-pic { margin-right: -64px;}
+.profile-pic img {position: relative; width: 100%; }
+
+.big-score {display: flex; border-radius: 50%; width: 100px; height: 100px; background-color: #752CAF; align-items: center; }
+.big-score h1 { width: 100%; }
+
+.m-bold {font-weight: 600;}
+.n-bold {font-weight: 600;}
+
+.icon { width: 96px; margin-right: 8px; margin-left: -16px;}
+
+.big-graph-wrapper {position: relative; width:100%; height:210px; display: flex;}
+.big-y-legend {width: 20px; font-size: 12px; padding-right: 4px; text-align: right; }
+.big-y-legend p {padding-bottom: 77px;}
+.big-graph { position: relative; display: flex; width: calc(100% - 26px); border-left: 2px solid #BBB4BE; border-bottom: 2px solid #BBB4BE; background: transparent url('https://cloud.braincore.ch/s/M9WyiNb7Z5yXTfq/preview') repeat-x;}
+.graph-score-wrap {position: relative; width:170px; margin-left:10px; height: 200px; top:10px; overflow: visible; text-align: center; }
+.graph-score-value {position: absolute; width: 40px; margin: 0 64px; background: #752CAF; border-radius: 50%; height:28px; display: flex; align-items: center; justify-content: center; color:#fff; font-weight: 600;}
+.graph-score-value-2 {position: absolute; width: 80px; margin: 0 44px; background: #752CAF; border-radius: 4px 4px 0 0; bottom: 0; display: flex; align-items: end; justify-content: center; color:#fff; font-weight: 600;}
+.graph-score-range {position: absolute; width: 80px; margin: 0 44px; border-top: 2px solid #D154EF; border-bottom: 2px solid #D154EF; background: transparent;}
+.graph-score-label {position: absolute; width: 100%; bottom: -32px; font-size: 12pt;}
+.graph-score-range span {position: relative; display: block; width: calc(50% - 1px); height:100%; border-right: 2px solid #D154EF;}
+
+.nad-graph-descr { font-size: 10pt; line-height: 1.2em; padding-left:24px; }
+.nad-graph-descr h6 {padding:8px 0;}
+
+.square {display: inline-block; width:10px; height:10px; margin:0 6px; border-radius: 2px;}
+.ssf1 { background-color: #29baed; }
+.ssf2 { background-color: #6acff3; }
+.ssf3 { background-color: #94ddf6; }
+.psf1 { background-color: #D154EF; }
+.psf2 { background-color: #df88f4; }
+.psf3 { background-color: #e8aaf7; }
+
+.small-graph-wrapper {display: flex;}
+.small-y-legend {height:192px; width:20px; text-align: right; padding-right: 4px; margin-top:-6px;}
+.small-y-legend p {font-size:9pt; padding-bottom:66px;}
+.small-graph { position: relative; display: flex; width:360px; height: 170px; background: transparent 4px url('https://cloud.braincore.ch/s/Ndst9AZgrX9ww93/preview') repeat; border-left: 2px solid #BBB4BE; border-bottom: 2px solid #BBB4BE; background-position-y: 4px;}
+.small-graph-legend > :first-child { float: left; padding-right: 8px;}
+.graph-bar-wrap {position: relative; width:80px; margin:0 20px; height: 166px; top:4px; overflow: visible; text-align: center; display: flex; align-items: end;}
+.bar-score { width:100%; border-radius: 4px 4px 0 0; }
+.bar-score-value {position: absolute; width:100%; bottom: -2px; text-align: center; font-weight: 600; color: #fff;}
+
+.emo-wrapper {display: flex; align-items: center;}
+.emo-heart-wrapper {position: relative; width: 200px; height: 200px; background: transparent 0/contain url('https://cloud.braincore.ch/s/gyqxg49xoYwjq32/preview') no-repeat; margin:0 24px;}
+.emo-heart {position: absolute; bottom:0; background: transparent 0/contain url('https://cloud.braincore.ch/s/pKDWCAtgxBKfmxC/preview') no-repeat; }
+
+.strategy-graph-wrapper { position: relative; width: 100%; height:240px; margin-left:24px; background: transparent 8px/contain url('https://cloud.braincore.ch/s/iQHACDKEgCWJ2EA/preview') no-repeat; }
+.strategy-graph {width:240px; height:240px; position: absolute; bottom:8px; left:16px; }
+.strategy-graph-border { position: absolute; bottom:0; display: block; border: 2px solid #fff; border-width: 2px 2px 0 0;}
+.strategy-graph-dot { position: absolute; width: 16px; height: 16px; top:-8px; right:-8px; background-color: #D154EF; border-radius: 50%;}
+.strategy-cost {position: absolute; top:-10px; left:-24px;}
+.strategy-time {position: absolute; right:-4px; bottom:-24px;}
+
+.uppercase {text-transform: uppercase;}
+
+.qnadTree { width:900px; }
+.qnadTree img { width:100%; }
+
+</style>
+<div style="font-size:0px; display:none; visibility:hidden; opacity:0; color:transparent; max-height:0px; height:0; width:0; mso-hide:all; "> 
+Brain Core Test - STUDENT REPORT PDF
+</div>
+<!--end of Preheader  -->
+
+<!-- INTRO Profile -->
+<div class="main-container">
+  <header>
+    <img src="https://cloud.braincore.ch/s/kjxwJ9JAzxN9bFM/preview" alt="BrainCore Test Logo"/>
+  </header>
+
+	<div class="intro-head page-padding flexing-horizontal justify-between pad-16">
+		<div class="col-48">
+      <h1 class="purple pad-16">{{staticTexts.eduTitle}}</h1>
+      <h3 class="m-bold">{{user.name}} {{user.surname}}</h3>
+      <h6 class="pad-8"><span class="gray">{{user.date}}</span> <span class="purple">{{user.module}}</span></h6>
+      <h2 class="purple m-bold uppercase">{{ profile.name }}</h2>
+      <h5 class="pink pad-0">{{ staticTexts.profileHighlights }}</h5>
+      <ul class="big-list n-bold">
+        {{#each highlight}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+		</div>
+		<div class="profile-pic col-53">
+			<img src="{{getEduProfilePic profile.id user.gender}}" alt="profile picture"/>
+		</div>
+	</div>
+
+  <div class="page-padding flexing-horizontal justify-between pad-24">
+    <div class="col-48">
+      <div class="flexing-horizontal align-center">
+        <img class="icon" src="https://cloud.braincore.ch/s/yaqEBeHbSdHfwqN/preview">
+        <h4 class="turq m-bold label">{{ staticTexts.profileStrongPoints }}</h4>
+      </div>
+      <ul>
+        {{#each (getTop3 strengths)}}
+        <li>{{ this }}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-48">
+      <div class="flexing-horizontal align-center">
+        <img class="icon" src="https://cloud.braincore.ch/s/FzA3myzNwDRabtt/preview">
+        <h4 class="turq m-bold label">{{ staticTexts.profileWeakPoints }}</h4>
+      </div>
+      <ul>
+        {{#each (getTop3 weaknesses)}}
+          <li>{{ this }}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  
+  <div class="page-padding">
+    <hr/>
+    <div class="flexing-horizontal justify-between align-center pad-24">
+      <div class="col-33">
+        <h1 class="purple huge pad-0">QNAD<span>®</span></h1>
+        <h4 class="pink m-bold">{{ current-performance-indicator.shortName }}</h4>
+      </div>
+      <div class="qnadTree">
+        <img src="{{getBigTree current-performance-indicator.normalizedValue }}"/>
+      </div>
+      <div>
+        <div class="big-score"><h1 class="m-bold white text-center">{{ current-performance-indicator.normalizedValue }}</h1></div>
+      </div>
+    </div>
+    <div>
+      <p>{{ current-performance-indicator.mainDefinition }} </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="page-padding">
+      <p>1</p>
+    </div>
+  </footer>
+</div>
+
+<!-- INTRO Values-->
+<div class="main-container">
+  <header>
+    <img src="https://cloud.braincore.ch/s/kjxwJ9JAzxN9bFM/preview" alt="BrainCore Test Logo"/>
+  </header>
+
+  <div class="page-padding pad-16">
+    <h4 class="m-bold pink pad-16">NAD Values</h4>
+    <div class="big-graph-wrapper pad-32">
+      <div class="big-y-legend">
+        <p class="gray">10</p>
+        <p class="gray">5</p>
+        <p class="gray">0</p>
+      </div>
+      <div class="big-graph">
+        <div class="graph-score-wrap">          
+          <div class="graph-score-value-2" style='height: calc({{ self-activation.normalizedValue }} * 20px);'>{{ self-activation.normalizedValue }}</div> <!-- dla kropek height: calc({{ self-activation.normalizedValue }} * 20px - 14px)--> 
+          <div class="graph-score-range" style="bottom: calc({{ self-activation.min }} * 20px); height: calc({{ self-activation.max }} * 20px - {{ self-activation.min }} * 20px);"></div>        
+          <p class="graph-score-label">{{ self-activation.shortName }} </p>
+        </div>
+        <div class="graph-score-wrap">          
+          <div class="graph-score-value-2" style="height: calc({{ self-confidence.normalizedValue }} * 20px);">{{ self-confidence.normalizedValue }}</div>      
+          <div class="graph-score-range" style="bottom: calc({{ self-confidence.min }} * 20px); height: calc({{ self-confidence.max }} * 20px - {{ self-confidence.min }} * 20px);"></div>    
+          <p class="graph-score-label">{{ self-confidence.shortName }}</p>
+        </div>
+        <div class="graph-score-wrap">
+          <div class="graph-score-value-2" style="height: calc({{ communication-strategy.normalizedValue }} * 20px);">{{ communication-strategy.normalizedValue }}</div>          
+          <div class="graph-score-range" style="bottom: calc({{ communication-strategy.min }} * 20px); height: calc({{ communication-strategy.max }} * 20px - {{ communication-strategy.min }} * 20px);"></div>
+          <p class="graph-score-label">{{ communication-strategy.shortName }}</p>
+        </div>
+        <div class="graph-score-wrap">
+          <div class="graph-score-value-2" style="height: calc({{ cooperation.normalizedValue }} * 20px);">{{ cooperation.normalizedValue }}</div>    
+          <div class="graph-score-range" style="bottom: calc({{ cooperation.min }} * 20px); height: calc({{ cooperation.max }} * 20px - {{ cooperation.min }} * 20px);"></div>      
+          <p class="graph-score-label">{{ cooperation.shortName }}</p>
+        </div>
+        <div class="graph-score-wrap">          
+          <div class="graph-score-value-2" style="height: calc({{ regularity.normalizedValue }} * 20px);">{{ regularity.normalizedValue }}</div>
+          <div class="graph-score-range" style="bottom: calc({{ regularity.min }} * 20px); height: calc({{ regularity.max }} * 20px - {{ regularity.min }} * 20px);"></div>
+          <p class="graph-score-label">{{ regularity.shortName }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="nad-graph-descr pad-16">
+      <h6 class="m-bold purple">Lexique</h6>
+      <p><span class="n-bold">{{ self-activation.shortName }}</span> ({{ self-activation.abbreviation }}) - {{ self-activation.shortDescription }}</p>
+      <p><span class="n-bold">{{ self-confidence.shortName }}</span>  ({{ self-confidence.abbreviation }}) - {{ self-confidence.shortDescription }}</p>
+      <p><span class="n-bold">{{ communication-strategy.shortName }}</span>  ({{ communication-strategy.abbreviation }}) - {{ communication-strategy.shortDescription }}</p>
+      <p><span class="n-bold">{{ cooperation.shortName }}</span>  ({{ cooperation.abbreviation }}) - {{ cooperation.shortDescription }}</p>
+      <p><span class="n-bold">{{ regularity.shortName }}</span>  ({{ regularity.abbreviation }}) - {{ regularity.shortDescription }}</p>
+    </div>
+  </div>
+
+  <div class="page-padding flexing-horizontal flex-fixed flex-wrapped pad-24">
+    <div class="col-50 pad-32">
+      <h4 class="purple m-bold">{{ staticTexts.socialSuccessFactorsLabel }}</h4>
+      <div class="small-graph-legend">
+        <p><span class="square ssf1"></span>{{ self-assertion.shortName }}</p>
+        <p><span class="square ssf2"></span>{{ leadership.shortName }}</p>
+        <p><span class="square ssf3"></span>{{ interpersonal-relation.shortName }}</p>
+      </div>
+      <div class="small-graph-wrapper">
+        <div class="small-y-legend">
+          <p class="gray">10</p>
+          <p class="gray">5</p>
+          <p class="gray">0</p>
+        </div>
+        <div class="small-graph">
+          <div class="graph-bar-wrap">
+            <div class="bar-score ssf1" style="height: calc({{ self-assertion.normalizedValue }} * 17px - 4px);"></div>
+            <div class="bar-score-value">{{ self-assertion.normalizedValue }}</div>
+          </div>
+          <div class="graph-bar-wrap">
+            <div class="bar-score ssf2" style="height: calc({{ leadership.normalizedValue }} * 17px - 4px);"></div>
+            <div class="bar-score-value">{{ leadership.normalizedValue }}</div>
+          </div>
+          <div class="graph-bar-wrap">
+            <div class="bar-score ssf3" style="height: calc({{ interpersonal-relation.normalizedValue }} * 17px - 4px);"></div>
+            <div class="bar-score-value">{{ interpersonal-relation.normalizedValue }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-50 pad-32">
+      <h4 class="purple m-bold">{{ staticTexts.individualSuccessLabel }}</h4>
+      <div class="small-graph-legend">
+        <p><span class="square psf1"></span>{{ intrapersonal-intelligence.shortName }}</p>
+        <p><span class="square psf2"></span>{{ self-development.shortName }}</p>
+        <p><span class="square psf3"></span>{{ achievements.shortName }}</p>
+      </div>
+      <div class="small-graph-wrapper">
+        <div class="small-y-legend">
+          <p class="gray">10</p>
+          <p class="gray">5</p>
+          <p class="gray">0</p>
+        </div>
+        <div class="small-graph">
+          <div class="graph-bar-wrap">
+            <div class="bar-score psf1" style="height: calc({{ intrapersonal-intelligence.normalizedValue }} * 17px - 4px);"></div>
+            <div class="bar-score-value">{{ intrapersonal-intelligence.normalizedValue }}</div>
+          </div>
+          <div class="graph-bar-wrap">
+            <div class="bar-score psf2" style="height: calc({{ self-development.normalizedValue }} * 17px - 4px);"></div>
+            <div class="bar-score-value">{{ self-development.normalizedValue }}</div>
+          </div>
+          <div class="graph-bar-wrap">
+            <div class="bar-score psf3" style="height: calc({{ achievements.normalizedValue }} * 17px - 4px);"></div>
+            <div class="bar-score-value">{{ achievements.normalizedValue }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-50">
+      <h4 class="purple m-bold pad-32">{{ emotional-intelligence-global.shortName }}</h4>
+      <div class="emo-wrapper">
+        <div class="emo-heart-wrapper">
+          <div class="emo-heart" style="left: calc((200px - 200px * {{ emotional-intelligence-global.normalizedValue }}/10)/2); width: calc(200px * {{ emotional-intelligence-global.normalizedValue }}/10); height: calc(200px * {{ emotional-intelligence-global.normalizedValue }}/10);"></div>
+        </div>
+        <h3 class="m-bold pink">{{ emotional-intelligence-global.normalizedValue }}</h3>
+      </div>
+    </div>
+
+    <div class="col-50">
+      <h4 class="purple m-bold pad-16">{{readHtmlInside staticTexts.strategyParentsLabel}}</h4>
+      <div class="strategy-graph-wrapper">
+        <div class="strategy-graph">
+          <div class="strategy-graph-border" style="width: calc({{roundValue time.normalizedValue}} * 21.9px); height: calc({{roundValue cost.normalizedValue}} * 21.4px);">
+            <div class="strategy-graph-dot"></div>
+            <div class="strategy-time"><h6 class="m-bold purple">{{roundValue time.normalizedValue}}</h6></div>
+            <div class="strategy-cost"><h6 class="m-bold purple">{{roundValue cost.normalizedValue}}</h6></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-padding urgent">    
+    <h4 class="m-bold pink pad-0">{{ staticTexts.mostUrgent }} </h4>
+    <hr/>
+    <ul class="m-bold">
+      {{#each most-urgent}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <footer>
+    <div class="page-padding">
+      <p>2</p>
+    </div>
+  </footer>
+</div>
+
+</body></html>

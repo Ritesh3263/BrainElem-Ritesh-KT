@@ -1,0 +1,6 @@
+node_modules
+public/content/files/*
+public/result/files/*
+public/content/images/[0-9]*
+swagger/swagger_v3.json
+!public/content/files/BrainCoreCoach.pdf

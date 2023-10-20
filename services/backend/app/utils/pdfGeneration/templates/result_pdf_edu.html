@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+<meta name="viewport" content="width=device-width;initial-scale=1.0; user-scalable=1;" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>STUDENT REPORT</title>    
+</head>
+		
+<body>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap');
+
+		html, body, h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0; border:0; }
+            h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', 'Helvetica', 'Futura', Arial, sans-serif; font-weight: 400; line-height: 1.4em;}
+            h1 { font-size: 72px;}
+            h2 { font-size: 60px;}
+            h3 { font-size: 48px;}
+            h4 { font-size: 28px;}
+            h5 { font-size: 21px;}
+            h6 { font-size: 14px;}
+            h3 span {vertical-align: sub; font-size: 24px;}
+            h1 span { vertical-align: super; font-size: 48px; }
+
+            ol { counter-reset: item; margin-left: 0; padding-left: 0; }
+            ol li { display: block; margin-bottom: .5em; margin-left: 2em; }
+            ol li::before { position: relative; display: inline-block; content: counter(item) ". "; counter-increment: item; width: 36px; margin-left: -36px; top:6px; font-size: 28px; font-family: 'Montserrat', 'Helvetica', 'Futura', Arial, sans-serif; font-weight: 600; color:#752CAF;}
+            ul { list-style-type: none; padding:0;}
+            ul li { display: flex; align-items: center; margin-bottom: .5em; margin-left: 2em; }
+            ul li::before { position: relative; display: inline-block; content: url('https://cloud.braincore.ch/s/X8Zja38GfeRR2SB/preview'); width: 36px; margin-left: -36px; font-size: 28px; font-family: sans-serif; font-weight: 600; color:#D154EF;}
+
+            body {font-family: 'Nunito Sans', sans-serif; font-size: 21px; font-weight: 400; color: #1f252d;}
+
+            hr { border: 1px solid #29baed; width:100%; }
+
+            .mainFrame {position: relative; width: 1920px; height: 1080px; }
+            .testBg {background-color: aquamarine;}
+
+            .flexy {display: flex; width:100%; }
+            
+            .pageWrap {position: relative; width: 100%; padding: 0 120px;}            
+            .wideFlex {width: calc(100% - 2*120px); display: flex; justify-content: space-between; align-items: start;}
+            .h100 {height: calc(100% - 210px);}
+            .w100 {width: 100%;}
+            .w800 {width: 800px;}
+            .colA {flex-direction: column;}
+            .marginBottomReset { margin-bottom: 0; }
+            .nadHeader {display: flex; width:100%; justify-content: space-between; align-items: end;}            
+
+            footer {position: absolute; bottom:0; left:0; width:1920px; height:80px; background: transparent bottom center/contain url('https://cloud.braincore.ch/s/4w3Qe5SGPMSGAC8/preview') no-repeat;}
+
+            .logoFrame { width: 320px; }
+			.logoCover { width: 400px; }
+            .logoFrame img,
+			.logoCover img { width: 100%; margin-left: -40px;}
+
+            .uppercase {text-transform: uppercase;}
+            .justified {text-align: justify; }
+
+            .mainPurple {color:#752CAF;}
+            .pink {color:#D154EF;}
+            .turq {color:#29baed;}
+            .gray {color: #4c5157;} /* #63676c */
+            .white {color:#fff;}
+
+            .mBold {font-weight: 600; }
+            .nBold {font-weight: 600; }
+            .alignRight {text-align: right;}
+            .padTitles { padding: 8px 0 32px 0;}
+
+            .scoreNad {width:160px;height:160px; background: transparent center/contain url('https://cloud.braincore.ch/s/Ac68cJqGoCns34n/preview') no-repeat;}
+            .scoreCircle {width:80px;height:80px; border-radius: 40px; background-color: #D154EF;}
+			.scoreVal { font-size:64px; text-align: center; padding: 28px 0;}
+            .score { font-size: 36px; text-align: center; padding: 16px 0;}
+
+            .iconTitle {display: flex; margin-top: 16px; gap: 16px; align-items: center;}
+
+            .pad18 {padding-top: 18px;}
+            .pad37 {padding-top: 37px;}
+            .pad60 {padding-top: 60px;}
+			.pad75 {padding-top: 75px;}
+
+            .mainCol {width: 800px; height: 100%; display: flex; }
+			.mainCol table tr td:first-child {width: 300px; vertical-align: top;}
+            .alignVertCenter {align-items: center;}
+            .alignPic img { width:100%; }
+            .alignTextCenter { text-align: center;}
+
+            .bgQnad { background: #fff top left url('https://cloud.braincore.ch/s/bK9epwSLn3FWT7x/preview') no-repeat;}
+            .bgStrong { background: #fff bottom left url('https://cloud.braincore.ch/s/Y9yf4ENwd2C2nnA/preview') no-repeat;}
+            .bgTrait { background: #fff bottom right url('https://cloud.braincore.ch/s/f2J4jzMnAdxGPzz/preview') no-repeat;}
+            .bgTraitCover { background: #fff bottom right url('https://cloud.braincore.ch/s/GWqkoMtsEX2PEyf/preview') no-repeat;}
+            .profilePic {right: -33px; position: relative;}
+            .coverPic {position: relative; width: 1000px; top: -40px; left: -100px; }
+
+            .tips {justify-content: space-between;}
+            .tipWrap { width: 780px;}
+            .arrowWrapper { width: 100px; text-align: center; margin-top: 116px; }
+
+			.strategyLegend {margin-left: 84px;}
+            .strategyLegend * { margin-left:16px;}
+            .strategyLegend img {height: 32px;}
+            .strategyGraphWrapper { position: relative; width: 100%; height:600px;  background: transparent 28px/contain url('https://cloud.braincore.ch/s/iQHACDKEgCWJ2EA/preview') no-repeat; background-position-y: -26px;}
+            .strategyGraph {width:500px; height:500px; position: absolute; bottom:50px; left:50px; }
+            .strategyGraphBorder { position: absolute; bottom:0; display: block; width: calc({{time.normalizedValue}} * 50px); height: calc({{cost.normalizedValue}} * 50px); border: 2px solid #fff; border-width: 2px 2px 0 0;}
+            .strategyGraphDot { position: absolute; width: 32px; height: 32px; top:-16px; right:-16px; background-color: #D154EF; border-radius: 50%;}
+            .strategyCost {position: absolute; top:-20px; left:-54px;}
+            .strategyTime {position: absolute; right:-20px; bottom:-40px;}
+			.strategyLabel { line-height: 48px;}
+			.strategyLabel span { font-size: 28px;}
+
+            .qnadTitle { width: 360px;}
+            .qnadScore { width: 180px; height:180px; background: transparent center url('https://cloud.braincore.ch/s/ZodEDmE32Wzpddc/preview') no-repeat;}
+            .qnadScore h1 { padding-top: 24px;}
+            .qnadTree { width:1100px; }
+            .qnadTree img { width:100%; }
+
+	</style>
+	<!-- =========== COVER =========== -->
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoCover"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+
+		<div class="pageWrap wideFlex h100">
+			<div class="mainCol alignVertCenter">
+				<div>
+				<h1 class="mBold mainPurple">{{staticTexts.eduTitle}}</h1>
+				<table cellspacing="8px" class="pad60 w800">
+					<tr>
+						<td><h4 class="gray">{{staticTexts.studentNameLabel}}</h4></td>
+						<td><h4 class="mBold">{{user.name}} {{user.surname}}</h4></td>
+					</tr>
+					<tr>
+						<td><h4 class="gray">{{staticTexts.studentDateLabel}} </h4></td>
+						<td><h4>{{user.date}}</h4></td>
+					</tr>
+					<tr>
+						<td><h4 class="gray">{{staticTexts.studentSchoolLabel}}</h4></td>
+						<td><h4>{{user.module}}</h4></td>
+					</tr>
+					<!--
+					<tr>
+						<td><h4 class="gray">Test ID:</h4></td>
+						<td><h4>646484</h4></td>
+					</tr>
+					-->
+				</table>
+			</div>               
+			</div>
+			<div class="mainCol alignVertCenter">
+				<img class="coverPic" src="https://cloud.braincore.ch/s/wjyotW4TsDGBHnY/preview" alt="cover picture"/>
+			</div>
+		</div>
+	</div>
+	<!-- =========== Profile Cover =========== -->
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+
+		<div class="pageWrap wideFlex h100">
+			<div class="mainCol colA pad60">
+				<h2 class="mBold mainPurple">{{ profile.name }}</h2>
+				<h4 class="mBold pink">{{ staticTexts.profileHighlights }}</h4>
+				<ul>
+					{{#each highlight}}
+					<li><h5>{{this}}</h5></li>
+					{{/each}}
+				</ul>
+				<p class="justified">{{ splitProfileDescription profile.description 1000 0}}</p>
+			</div>
+			<div class="mainCol justified alignVertCenter">
+				<img class="profilePic" src='{{getEduProfilePic profile.id user.gender}}' alt="profile picture"/>
+			</div>
+		</div>
+
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6>{{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="pageNumber"><h6 class="mBold">2</h6></div>
+			</div>
+		</footer>
+	</div>
+	<!-- =========== Profile Description =========== -->
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+
+		<div class="pageWrap wideFlex h100">
+			<div class="mainCol colA pad37 justified">
+				<p class="marginBottomReset">{{ splitProfileDescription profile.description 1000 1}}</p>
+			</div>
+			<div class="mainCol justified alignVertCenter">
+				<img class="profilePic" src='{{getEduProfilePic profile.id user.gender}}' alt="entrepreneur profile picture"/>
+			</div>
+		</div>
+
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.profilePageBtitle }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">3</h6></div>
+			</div>
+		</footer>
+	</div>
+	<!-- =========== Strong & Weak =========== -->
+	<div class="mainFrame bgStrong">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+
+		<div class="pageWrap wideFlex h100">
+			<div class="mainCol colA justified pad18">
+				<div class="alignTextCenter w100">
+					<img src="https://cloud.braincore.ch/s/XqgBs2cjwLrAfdF/preview" alt=""/>
+					<h4 class="pink mBold">{{ staticTexts.profileStrongPoints }}</h4>
+				</div>
+				<div>
+					<ol>
+						{{#each strengths}}
+						<li>{{ this }}</li>
+						{{/each}}
+					</ol>
+				</div>
+			</div>
+			<div class="mainCol colA justified pad18">
+				<div class="alignTextCenter w100">
+					<img src="https://cloud.braincore.ch/s/MaXZq8reBzgxQeK/preview" alt=""/>
+					<h4 class="pink mBold">{{ staticTexts.profileWeakPoints }}</h4>
+				</div>
+				<div>
+					<ol>
+						{{#each weaknesses}}
+						<li>{{ this }}</li>
+						{{/each}}
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.strongAndWeak }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">4</h6></div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- =========== NADs =========== -->
+	{{#each traitsLists.nads}} 
+		{{> eduFullNad currentNad=this nadId=@index currentUser=../user staticT=../staticTexts userProfile=../profile.name}}
+	{{/each}}
+
+	<!-- =========== QNAD =========== -->
+	<div class="mainFrame bgQnad">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+		<div class="pageWrap wideFlex alignVertCenter">
+			<div class="qnadTitle">
+				<h1 class="mBold mainPurple">QNAD<span>®</span></h1>
+				<h4 class="mBold pink">{{ current-performance-indicator.shortName }}</h4>
+			</div>
+			<div class="qnadScore alignTextCenter">
+				<h1 class="mBold white">{{ current-performance-indicator.normalizedValue }}</h1> <!--{{ mapQnadValue x }}-->
+			</div>
+			<div class="qnadTree">
+				<img src="{{getBigTree current-performance-indicator.normalizedValue }}" alt="tree indicator" />
+			</div>
+		</div>
+		<div class="pageWrap wideFlex pad37">
+			<div class="mainCol colA">
+				<h6 class="gray marginBottomReset justified pad18">{{ current-performance-indicator.description }}</h6>
+				<!-- <p class="nBold mainPurple">QNAD® presents the effect of catalysts - NAD® values</p> -->
+				<div class="iconTitle"><img src="https://cloud.braincore.ch/s/HwJeBEmZRwAFRqe/preview" alt=""/><h4 class="mBold pink">{{ staticTexts.meaning }}</h4></div>
+				<p class="justified">{{ current-performance-indicator.state }}</p>
+			</div>
+			<div class="mainCol colA">
+				<div class="iconTitle"><img src="https://cloud.braincore.ch/s/dDK3knF9XTs7KXB/preview" alt=""/><h4 class="mBold pink">{{ staticTexts.qnadDevelop }}</h4></div>
+				<ol class="justified">
+					{{readHtmlInside current-performance-indicator.develop }}
+				</ol>
+			</div>
+		</div>
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<!-- <div class="sectionTitle"><h6>{{ nads.nadPageTitle }}</h6></div> -->
+				<div class="pageNumber"><h6 class="mBold">15</h6></div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- =========== SSF Cover =========== -->
+	<div class="mainFrame bgTraitCover">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+
+		<div class="pageWrap wideFlex h100">
+			<div class="mainCol alignPic alignVertCenter">
+				<img src="{{getEduPic 'ssf'}}" alt="picture"/>
+			</div>
+			<div class="mainCol alignVertCenter">
+				<div>
+					<h3 class="pink mBold">{{ staticTexts.socialSuccessFactorsLabel }}</h3>
+					<p class="justified">{{ staticTexts.socialSuccessFactorsDescription }}</p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="pageNumber"><h6 class="mBold">16</h6></div>
+			</div>
+		</footer>
+	</div>
+	<!-- =========== SSF Traits Pages =========== -->
+	{{#each traitsLists.ssf}} 
+		{{> eduFullTrait currentTrait=this traitId=@index startPage=17 sectionTitle=../staticTexts.socialSuccessFactorsLabel currentUser=../user staticT=../staticTexts userProfile=../profile.name}}
+	{{/each}}
+
+	<!-- =========== EMO Cover =========== -->
+	<div class="mainFrame bgTraitCover">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+
+		<div class="pageWrap wideFlex h100">
+			<div class="mainCol alignPic alignVertCenter">
+				<img src="{{getEduPic 'emo'}}" alt="picture"/>
+			</div>
+			<div class="mainCol alignVertCenter">
+				<div>
+					<h3 class="pink mBold">{{ staticTexts.emotionalLabel }}</h3>
+					<p class="justified">{{ staticTexts.emotionalDescription }}</p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="pageNumber"><h6 class="mBold">20</h6></div>
+			</div>
+		</footer>
+	</div>
+	<!-- =========== EMO Traits Pages =========== -->
+	{{#each traitsLists.emo}} 
+		{{> eduFullTrait currentTrait=this traitId=@index startPage=21 sectionTitle=../staticTexts.emotionalLabel}}
+	{{/each}}
+
+	<!-- =========== ISF Cover =========== -->
+	<div class="mainFrame bgTraitCover">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+
+		<div class="pageWrap wideFlex h100">
+			<div class="mainCol alignPic alignVertCenter">
+				<img src="{{getEduPic 'isf'}}" alt="picture"/>
+			</div>
+			<div class="mainCol alignVertCenter">
+				<div>
+					<h3 class="pink mBold">{{ staticTexts.individualSuccessLabel }}</h3>
+					<p class="justified">{{ staticTexts.individualSuccessDescription }}</p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="pageNumber"><h6 class="mBold">30</h6></div>
+			</div>
+		</footer>
+	</div>
+	<!-- =========== ISF Traits Pages =========== -->
+	{{#each traitsLists.isf}} 
+		{{> eduFullTrait currentTrait=this traitId=@index startPage=31 sectionTitle=../staticTexts.individualSuccessLabel}}
+	{{/each}}
+
+	<!-- =========== Strategy Cover =========== -->
+	<div class="mainFrame bgTraitCover">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+
+		<div class="pageWrap wideFlex h100">
+			<div class="mainCol alignPic alignVertCenter">
+				<div class="strategyGraphWrapper">
+					<div class="strategyGraph">
+						<div class="strategyGraphBorder">
+							<div class="strategyGraphDot"></div>
+							<div class="strategyTime"><h4 class="mBold mainPurple">{{roundValue time.normalizedValue}}</h4></div>
+							<div class="strategyCost"><h4 class="mBold mainPurple">{{roundValue cost.normalizedValue}}</h4></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mainCol alignVertCenter">
+				<div>
+					<h3 class="pink mBold strategyLabel">{{readHtmlInside staticTexts.strategyParentsLabel}}</h3>
+					<p class="justified">{{time-and-costs.description}}</p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="pageNumber"><h6 class="mBold">34</h6></div>
+			</div>
+		</footer>
+	</div>
+	<!-- =========== Strategy First =========== -->
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+		<div class="pageWrap wideFlex colA pad18">
+			<h4 class="mBold mainPurple">{{staticTexts.meaning}} </h4>
+			<p>{{time-and-costs.score}}</p>
+			<div class="flexy pad18">
+				<h4 class="mBold mainPurple w800">{{ staticTexts.strategyActionsLabel }}:</h4>
+				<div class="flexy w800 strategyLegend alignVertCenter">
+					<img src="https://cloud.braincore.ch/s/LqpBwL6oSnLfAgA/preview" alt=""/><h6>{{staticTexts.strategyPriorityHigh}}</h6><img src="https://cloud.braincore.ch/s/6LyetoPsqNEbBXE/preview" alt=""/><h6>{{staticTexts.strategyPriorityMedium}}</h6><img src="https://cloud.braincore.ch/s/2t8cpafYRs8aiLG/preview" alt=""/><h6>{{staticTexts.strategyPriorityLow}}</h6>
+				</div>
+			</div>
+			<hr/>
+			{{#each (splitSolutions all-solutions 3 0)}}
+			<div class="tips flexy">
+				<div class="tipWrap">
+					<div class="iconTitle">
+						<img src="https://cloud.braincore.ch/s/LqpBwL6oSnLfAgA/preview" alt="Priority Icon"/>
+						<h4 class="mBold pink pad18">{{this.name}}</h4>
+					</div>
+					<p class="justified">{{this.description}}</p>
+				</div>
+				<div class="arrowWrapper"><img src="https://cloud.braincore.ch/s/rzdjwL592zeapXr/preview" alt="arrow"/></div>
+				<div class="tipWrap">
+					<h4 class="mBold turq {{fixTipAlignment this.name}}">{{../staticTexts.expectedResults}}</h4>
+					<p class="justified">{{this.expected_effect}}</p>
+				</div>
+			</div>
+			{{/each}}			
+		</div>
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.strategyActionsLabel }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">35</h6></div>
+			</div>
+		</footer>
+	</div>
+	<!-- =========== Strategy Pages =========== -->
+	{{#if (splitSolutions all-solutions 3 1) }}
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+		<div class="pageWrap wideFlex colA pad18">
+			{{#each (splitSolutions all-solutions 3 1)}}
+			<div class="tips flexy">
+				<div class="tipWrap">
+					<div class="iconTitle">
+						<img src="https://cloud.braincore.ch/s/LqpBwL6oSnLfAgA/preview" alt="Priority Icon"/>
+						<h4 class="mBold pink pad18">{{this.name}}</h4>
+					</div>
+					<p class="justified">{{this.description}}</p>
+				</div>
+				<div class="arrowWrapper"><img src="https://cloud.braincore.ch/s/rzdjwL592zeapXr/preview" alt="arrow"/></div>
+				<div class="tipWrap">
+					<h4 class="mBold turq {{fixTipAlignment this.name}}">{{../staticTexts.expectedResults}}</h4>
+					<p class="justified">{{this.expected_effect}}</p>
+				</div>
+			</div>
+			{{/each}}			
+		</div>
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.strategyActionsLabel }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">36</h6></div>
+			</div>
+		</footer>
+	</div>
+	{{/if}}
+
+	{{#if (splitSolutions all-solutions 3 2) }}
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+		<div class="pageWrap wideFlex colA pad18">
+			{{#each (splitSolutions all-solutions 3 2)}}
+			<div class="tips flexy">
+				<div class="tipWrap">
+					<div class="iconTitle">
+						<img src="https://cloud.braincore.ch/s/LqpBwL6oSnLfAgA/preview" alt="Priority Icon"/>
+						<h4 class="mBold pink pad18">{{this.name}}</h4>
+					</div>
+					<p class="justified">{{this.description}}</p>
+				</div>
+				<div class="arrowWrapper"><img src="https://cloud.braincore.ch/s/rzdjwL592zeapXr/preview" alt="arrow"/></div>
+				<div class="tipWrap">
+					<h4 class="mBold turq {{fixTipAlignment this.name}}">{{../staticTexts.expectedResults}}</h4>
+					<p class="justified">{{this.expected_effect}}</p>
+				</div>
+			</div>
+			{{/each}}			
+		</div>
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.strategyActionsLabel }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">37</h6></div>
+			</div>
+		</footer>
+	</div>
+	{{/if}}
+
+	{{#if (splitSolutions all-solutions 3 3) }}
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+		<div class="pageWrap wideFlex colA pad18">
+			{{#each (splitSolutions all-solutions 3 3)}}
+			<div class="tips flexy">
+				<div class="tipWrap">
+					<div class="iconTitle">
+						<img src="https://cloud.braincore.ch/s/LqpBwL6oSnLfAgA/preview" alt="Priority Icon"/>
+						<h4 class="mBold pink pad18">{{this.name}}</h4>
+					</div>
+					<p class="justified">{{this.description}}</p>
+				</div>
+				<div class="arrowWrapper"><img src="https://cloud.braincore.ch/s/rzdjwL592zeapXr/preview" alt="arrow"/></div>
+				<div class="tipWrap">
+					<h4 class="mBold turq {{fixTipAlignment this.name}}">{{../staticTexts.expectedResults}}</h4>
+					<p class="justified">{{this.expected_effect}}</p>
+				</div>
+			</div>
+			{{/each}}			
+		</div>
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.strategyActionsLabel }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">38</h6></div>
+			</div>
+		</footer>
+	</div>
+	{{/if}}
+
+	{{#if (splitSolutions all-solutions 3 4) }}
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+		<div class="pageWrap wideFlex colA pad18">
+			{{#each (splitSolutions all-solutions 3 4)}}
+			<div class="tips flexy">
+				<div class="tipWrap">
+					<div class="iconTitle">
+						<img src="https://cloud.braincore.ch/s/LqpBwL6oSnLfAgA/preview" alt="Priority Icon"/>
+						<h4 class="mBold pink pad18">{{this.name}}</h4>
+					</div>
+					<p class="justified">{{this.description}}</p>
+				</div>
+				<div class="arrowWrapper"><img src="https://cloud.braincore.ch/s/rzdjwL592zeapXr/preview" alt="arrow"/></div>
+				<div class="tipWrap">
+					<h4 class="mBold turq {{fixTipAlignment this.name}}">{{../staticTexts.expectedResults}}</h4>
+					<p class="justified">{{this.expected_effect}}</p>
+				</div>
+			</div>
+			{{/each}}			
+		</div>
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.strategyActionsLabel }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">39</h6></div>
+			</div>
+		</footer>
+	</div>
+	{{/if}}	
+
+	{{#if (splitSolutions all-solutions 3 5) }}
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+		<div class="pageWrap wideFlex colA pad18">
+			{{#each (splitSolutions all-solutions 3 5)}}
+			<div class="tips flexy">
+				<div class="tipWrap">
+					<div class="iconTitle">
+						<img src="https://cloud.braincore.ch/s/LqpBwL6oSnLfAgA/preview" alt="Priority Icon"/>
+						<h4 class="mBold pink pad18">{{this.name}}</h4>
+					</div>
+					<p class="justified">{{this.description}}</p>
+				</div>
+				<div class="arrowWrapper"><img src="https://cloud.braincore.ch/s/rzdjwL592zeapXr/preview" alt="arrow"/></div>
+				<div class="tipWrap">
+					<h4 class="mBold turq {{fixTipAlignment this.name}}">{{../staticTexts.expectedResults}}</h4>
+					<p class="justified">{{this.expected_effect}}</p>
+				</div>
+			</div>
+			{{/each}}			
+		</div>
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.strategyActionsLabel }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">40</h6></div>
+			</div>
+		</footer>
+	</div>
+	{{/if}}	
+
+	{{#if (splitSolutions all-solutions 3 6) }}
+	<div class="mainFrame">
+		<header class="pageWrap wideFlex pad60">
+			<div class="logoFrame"><img src="https://cloud.braincore.ch/s/CxmJ5EyRzbDQcaL/preview" alt="BrainElem Academy Logo"/></div>                
+		</header>
+		<div class="pageWrap wideFlex colA pad18">
+			{{#each (splitSolutions all-solutions 3 6)}}
+			<div class="tips flexy">
+				<div class="tipWrap">
+					<div class="iconTitle">
+						<img src="https://cloud.braincore.ch/s/LqpBwL6oSnLfAgA/preview" alt="Priority Icon"/>
+						<h4 class="mBold pink pad18">{{this.name}}</h4>
+					</div>
+					<p class="justified">{{this.description}}</p>
+				</div>
+				<div class="arrowWrapper"><img src="https://cloud.braincore.ch/s/rzdjwL592zeapXr/preview" alt="arrow"/></div>
+				<div class="tipWrap">
+					<h4 class="mBold turq {{fixTipAlignment this.name}}">{{../staticTexts.expectedResults}}</h4>
+					<p class="justified">{{this.expected_effect}}</p>
+				</div>
+			</div>
+			{{/each}}			
+		</div>
+		<footer>
+			<div class="pageWrap wideFlex pad18">
+				<div class="userName"><h6> {{ user.name }} {{ user.surname }} <span class="uppercase mainPurple mBold">{{ profile.name }}</span></h6></div>
+				<div class="sectionTitle"><h6>{{ staticTexts.strategyActionsLabel }}</h6></div>
+				<div class="pageNumber"><h6 class="mBold">41</h6></div>
+			</div>
+		</footer>
+	</div>
+	{{/if}}	
+
+</body></html>

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elia-search-engine-interface
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elia-search-engine-interface
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+        - image: elia-search-engine-interface
+          name: elia-search-engine-interface
+          envFrom:
+            - configMapRef:
+                name: elia-search-engine-interface
+            - secretRef:
+                name: elia-main-secret
+          resources: {}
+      restartPolicy: Always
+
+status: {}

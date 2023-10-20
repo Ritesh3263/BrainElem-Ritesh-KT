@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elia-task-executor
+data:
+  MESSAGE_BROKER_HOST: prod-elia-message-broker.prod.svc.cluster.local
+  DATABASE_HOST: prod-elia-database.prod.svc.cluster.local
+
+  EMAILS_FROM_EMAIL: noreplay@elia.academy
+
+  BACKEND_URL: http://prod-elia-backend.prod.svc.cluster.local/api/v1
+  ELIA_ALGORITHMS_URL: http://prod-elia-algorithms.prod.svc.cluster.local:5000

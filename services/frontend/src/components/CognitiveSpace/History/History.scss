@@ -1,0 +1,34 @@
+.recharts-legend-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-left: 0 !important;
+}
+.recharts-responsive-container{
+    @media (max-width: 576px){
+        height: 400px !important;
+    }
+}
+.graph_heading{
+    margin-bottom: 24px;
+}
+.recharts-default-legend {
+    display: flex;
+   flex-wrap: wrap;
+    li {
+        display: flex !important;
+        align-items: center;
+        .recharts-legend-item-text {
+            span {
+                color: var(--NSupText) !important;
+                font-size: 18px;
+                font-weight: bold;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+.recharts-legend-item{
+    svg{
+        border-radius: 50%;
+    }
+}

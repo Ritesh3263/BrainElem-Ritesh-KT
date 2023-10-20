@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: elia-proxy-nemesis-ingress-frontend
+  annotations:
+    traefik.frontend.priority: "3"
+    traefik.ingress.kubernetes.io/router.tls: "true"
+spec:
+  rules:
+    - host: nemesis.braincore.app
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: prod-elia-frontend
+                port:
+                  number: 80
+  tls:
+    - hosts:
+      - nemesis.braincore.app
+      secretName: elia-prod-certificates

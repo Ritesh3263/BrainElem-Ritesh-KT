@@ -1,0 +1,24 @@
+# The default server.
+server {
+  listen       80 default_server;
+  server_name  everythingelse;
+
+  error_page 404 /index.html;
+
+  # Everything is a 404
+  location /icon.svg {
+    root /usr/share/nginx/html;
+  }
+
+  # Everything is a 404
+  location / {
+    return 404; #return the code 404
+  }
+
+  # link the code to the file
+  location = /index.html {
+    #EDIT this line to make it match the folder where there is your errors page
+    #Dont forget to create 404.html in this folder
+    root  /usr/share/nginx/html/;
+  }
+}

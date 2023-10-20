@@ -1,0 +1,228 @@
+:root {
+    --gradebook-title-height: 190px;
+    --gradebook-window-top: 191px;
+}
+
+.ourGradebook .MuiDataGrid-root .MuiDataGrid-main {
+    margin-top: -30px;
+}
+
+.ourGradebook .MuiDataGrid-window {
+    top: var(--gradebook-window-top) !important;
+}
+.ourGradebook .MuiDataGrid-columnsContainer {
+    top: 0px;
+    min-height: var(--gradebook-title-height) !important;
+    max-height: var(--gradebook-title-height) !important;
+}
+.ourGradebook .MuiDataGrid-root .MuiDataGrid-columnHeaderWrapper {
+    height: var(--gradebook-title-height);
+    align-items: flex-end;
+}
+.ourGradebook .MuiDataGrid-root .MuiDataGrid-cell--textLeft.MuiDataGrid-cell--withRenderer
+{
+    text-align: center;
+    font-size: 16px;
+    justify-content: center;
+}
+.ourGradebook .MuiDataGrid-root .MuiDataGrid-columnsContainer {
+    border-bottom: unset !important;
+}
+
+.ourGradebook .MuiDataGrid-root .MuiDataGrid-columnSeparator {
+    color: transparent !important;
+}
+.ourGradebook .MuiDataGrid-columnHeaderDraggableContainer{
+    width: auto;
+}
+.ourGradebook .MuiDataGrid-columnHeaderDraggableContainer .MuiTypography-subtitle2{
+    width: 140px;
+    padding-left: 7px;
+    line-height: 1.2;
+    overflow: overlay;
+    white-space: break-spaces;
+}
+/* attempt: to move the css from jsx to here (comment/remove `position: absolute;` from both classes) */
+/* .ourGradebook .MuiDataGrid-columnHeader:not([data-field="userName"]):not([data-field="id"]) {
+    top: 10px;
+    left: 36px;
+    margin: 0;
+    origin: 0 100%;
+    display: inline-block;
+    padding: 0;
+    overflow: visible;
+    position: absolute;
+    transform: rotate( -90deg);
+    text-align: left;
+    line-height: 18px;
+    white-space: wrap;
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate( -90deg);
+    -o-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
+}
+.ourGradebook .MuiDataGrid-columnHeader[data-field="userName"],
+.ourGradebook .MuiDataGrid-columnHeader[data-field="id"]{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    line-height: 26px;
+    white-space: nowrap;
+} */
+.ourGradebook .MuiDataGrid-columnHeader:not([data-field="userName"]):not([data-field="id"]):not([data-field="average"]) {
+    left: 56px;
+
+}
+
+
+.ourGradebook .MuiDataGrid-columnHeaderTitleContainer {
+    width: 180px;
+    padding-left: 7px;
+    min-height: 50px;
+    line-height: 1.2;
+    overflow: overlay;
+    white-space: break-spaces;
+}
+
+
+.ourGradebook .MuiDataGrid-columnHeader:not([data-field="userName"]):not([data-field="id"]),
+.ourGradebook .MuiDataGrid-cell:not([data-field="userName"]):not([data-field="id"]){
+    min-width: 56px !important;
+    max-width: 56px !important;
+}
+
+.ourGradebook .MuiDataGrid-cell{
+    border: solid 1px white;
+    background: rgba(187,216,221,255);
+}
+
+.ourGradebook .MuiDataGrid-cell[data-field="id"],
+.ourGradebook .MuiDataGrid-columnHeader[data-field="id"]{
+    min-width: 40px !important;
+    max-width: 40px !important;
+    text-align: center;
+}
+.ourGradebook .MuiDataGrid-cell[data-field="userName"],
+.ourGradebook .MuiDataGrid-columnHeader[data-field="userName"]{
+    min-width: 200px !important;
+    max-width: 200px !important;
+}
+
+.ourGradebook .MuiDataGrid-columnHeader[data-field="userName"]{
+    display: none;
+}
+.ourGradebook .MuiDataGrid-columnHeader[data-field="id"]{
+    min-width: 240px !important;
+    max-width: 240px !important;
+}
+
+.ourGradebook .MuiDataGrid-columnHeader[data-field="empty"]{
+    border: none;
+    background: transparent;
+    color: transparent;
+}
+
+
+.ourGradebook .MuiDataGrid-root .MuiDataGrid-columnHeaderTitle{
+
+    white-space:normal !important;
+    font-size: 18px;
+}
+
+.ourGradebook .MuiDataGrid-columnHeader[data-field="id"]>.MuiDataGrid-columnHeaderDraggableContainer{
+    padding-top: 200px;
+    padding-bottom: 80px;
+    line-height: 2;
+    padding-right: 0px;
+    padding-left: 0px;
+    color: rgba(82, 57, 112, 1);
+}
+
+
+.ourGradebook .MuiDataGrid-columnHeader[data-field="id"]{
+    padding-left: 0px;
+}
+.ourGradebook .MuiDataGrid-columnHeader[data-field="average"]{
+    letter-spacing: 2px;
+    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white;
+    height: 20px;
+    font-size: 15px;
+    top: 10px;
+    color: white;
+}
+.ourGradebook .MuiDataGrid-cell[data-field="average"]{
+    background-color:#4ba4a5;
+    color:white;
+    text-shadow: 0 0 0.55px white, 0 0 0.55px white, 0 0 0.55px white;
+    padding: 0px;
+    font-size: 16px;
+
+}
+.ourGradebook .MuiDataGrid-cell[data-field="empty"]{
+    display: none;
+    /* background-color: #b2afc5; */
+    /* border: none; */
+}
+
+.ourGradebook .MuiDataGrid-columnHeader>.MuiDataGrid-columnHeaderDraggableContainer{
+    position: relative;
+    font-size: 15px;
+    padding-left: 6px;
+    padding-right: 32px;
+    padding-top: 5px;
+    background-color:rgba(255, 255, 255, 0.7);
+    border: 1px solid white;
+    min-width: 240px !important;
+    max-width: 240px !important;
+}
+
+.ourGradebook .MuiDataGrid-columnHeader[data-field="average"]>.MuiDataGrid-columnHeaderDraggableContainer{
+    position: relative;
+    font-size: 15px;
+    background: #4ba4a5;
+    padding-left: 6px;
+    padding-right: 32px;
+    padding-top: 5px;
+    border: none ;
+    min-width: 200px !important;
+    max-width: 200px !important;
+}
+
+.ourGradebook .MuiDataGrid-columnHeader[data-field="empty"]>.MuiDataGrid-columnHeaderDraggableContainer{
+    position: relative;
+    font-size: 15px;
+    background: transparent;
+    padding-left: 6px;
+    padding-right: 32px;
+    padding-top: 5px;
+    border: none ;
+    min-width: 200px !important;
+    max-width: 200px !important;
+}
+
+.ourGradebook .MuiDataGrid-overlay {
+    top: var(--gradebook-window-top) !important;
+}
+
+/* fix for safari */
+.ourGradebook .MuiInputBase-input {
+    padding: 0px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.ourGradebook .MuiDataGrid-cell:not([data-field="userName"]){
+    text-align: center;
+}
+
+.ourGradebook .MuiDataGrid-cell:not(.emptyCell):not(.valueCell) {
+    display: contents;
+    border: none;
+    background: #b2afc5;
+}

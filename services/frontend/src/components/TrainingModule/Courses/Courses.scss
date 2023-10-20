@@ -1,0 +1,75 @@
+.Course_Module {
+    .admin_content {
+      .admin_heading {
+        display: flex;
+        align-items: center;
+        .typo_h5 {
+          margin-right: 20px;
+        }
+        .heading_buttons {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          .uploadCSVbtn {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .heading-divider {
+        background: #f79c30;
+        border-radius: 10px 0px 0px 10px;
+        width: 56px;
+        height: 5px;
+        position: relative;
+        border-bottom: 0;
+        margin-left: 3px;
+    
+        &::before {
+          content: "";
+          background: var(--MedPurple);
+          border-radius: 0px 10px 10px 0px;
+          width: 6px;
+          height: 5px;
+          position: absolute;
+          right: -10px;
+        }
+    }
+    .MuiFilledInput-root {
+        border: 1px solid #e7e9ea;
+        border-radius: 10px 10px 0px 0px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #15a3a5;
+        background-color: var(--PWhite);
+      }
+  
+    .MuiDataGrid-columnHeaderTitle{
+        color: var(--NSupText);
+    }
+  
+    .upload_btn{
+        .MuiFormControl-root{
+            margin-top: 8px;
+        }
+        .MuiFilledInput-root{
+            min-height: 63px;
+            border-bottom: 3px solid #15a3a5;
+        }
+    }
+}
+
+
+.tbl-chapter-selected{
+  background-color: var(--SupCloudy);
+  padding: 5px 15px;
+  border-radius: 8px;
+  width: 70%;
+  @media (max-width:576px) {
+    width: 130%;
+  }
+  .tbl-chapter-row{
+    background-color: var(--PWhite);
+    padding: 0 10px;
+    border-radius: 8px;
+  }
+}

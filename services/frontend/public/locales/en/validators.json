@@ -1,0 +1,9 @@
+{
+    "required":              "This field is required.",
+    "invalidEmail":          "This is not a valid email.",
+    "invalidLengthUsername": "The username must be between 3 and 20 characters.",
+    "invalidLengthPassword": "The password must be between 6 and 40 characters.",
+    "invalidLength3to20": "Must be between 3 and 20 characters",
+    "invalidLength3to200": "Must be between 3 and 200 characters"
+    
+}

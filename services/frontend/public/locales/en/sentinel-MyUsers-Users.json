@@ -1,0 +1,18 @@
+{
+    "CREATE_USER": "Create User",
+    "CREATE_NEW_USER": "Create New User",
+
+    "EMAIL_NOT_AVAILABLE": "Email is not available",
+    "PLEASE_PROVIDE_NAME": "Please provide name for the user",
+    "PLEASE_PROVIDE_SURNAME": "Please provide surname for the user",
+    "SELECT_ROLES": "Select Roles",
+    "SELECT_DEFAULT_ROLES": "Select User’s Default Role *",
+    "DEFAULT_ROLE_MEANS": "Default role means the role which the user will be assigned whenever they login to the system.",
+
+    "ASSIGN_COMPANY": "Assign company",
+    "WITHOUT_COMPANY": "Without company",
+    "USERNAME_NOT_AVAILABLE": "Username is not available",
+    "SET_PASSWORD": "Set password",
+
+    "CONTACT_DETAILS": "Contact Details"
+}

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elia-frontend
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    spec:
+      containers:
+        - image: elia-frontend
+          name: elia-frontend
+          envFrom:
+            - configMapRef:
+                name: elia-frontend
+            - secretRef:
+                name: elia-main-secret
+          resources: {}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            failureThreshold: 6
+            periodSeconds: 30
+          startupProbe:
+            httpGet:
+              path: /
+              port: 80
+            failureThreshold: 60
+            periodSeconds: 60
+            timeoutSeconds: 10
+      restartPolicy: Always
+status: {}

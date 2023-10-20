@@ -1,0 +1,363 @@
+/* universal */
+
+// .content_tabing {
+//   margin-top: 25px;
+//   border-bottom: 1px solid var(--PBorderColor);
+// }
+
+.tab_style {
+  background-color: transparent;
+  overflow: visible;
+  height: 40px;
+
+  button {
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid var(--PBorderColor);
+    margin-right: 15px;
+    height: 40px;
+
+    &.Mui-selected {
+      border-color: var(--MedPurple);
+      background: var(--MedPurple);
+    }
+  }
+}
+
+.pos-absolute{
+  position: absolute;
+}
+
+.acc_heading {
+  text-align: left;
+}
+
+.no-scroll{
+  overflow-y: unset;
+}
+
+.justifyBetween{
+  justify-content: space-between !important;
+}
+
+/* universal */
+
+.mainChildDiv{
+  background-color: var(--PWhite);
+  padding: 0 25px;
+  margin: 0 30px;
+  width: auto;
+  border-radius: 16px;
+  position: relative;
+
+  .admin_content {
+    padding: 0 40px;
+    margin-top: 25px;
+    .admin_heading {
+      display: flex;
+      align-items: center;
+      
+      .heading_buttons{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+        .uploadCSVbtn{
+          margin: 0;
+        }
+        .btnClear{
+          background-color: transparent;
+          color: #F79C30 ;
+          border:2px solid #F79C30;
+          border-radius: 10px;
+          padding: 0 20px !important;
+          box-shadow: none;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  /* For User Table*/
+
+  .usercsc_accordian{
+    .minHeight-60vh{
+      min-height: 60vh;
+      .modelUserPic{
+        width: 400px;
+        position: absolute;
+        bottom: 0;
+        right: 200px;
+      }
+      
+    }
+    .CSVTable{
+      box-shadow: none;
+      .titleCsv{
+        display: none;
+      }
+      .subtitleCsv{
+        display: none;
+      }
+      .tableHeader{
+        .col, .col-1{
+            border-bottom: 1px solid var(--SupCloudy);
+      
+            small{
+                font-weight: 600;
+                font-size: 1rem;
+            }
+        }
+      }      
+      .tblRows{
+        border: none;
+        border-bottom: 1px solid var(--SupCloudy);
+        .indexAvtar{
+          background-color: transparent;
+          color: var(--NSupText);
+          font-size: 1rem;
+        }
+        .chkboxUserCSVPreview.Mui-checked{
+          color: var(--NSupText) !important;
+        }
+        
+      }
+      
+      .gap-20{
+        gap:20px;
+        padding: 20px;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .account-grid {
+    .MuiFormControl-marginDense {
+      padding-right: 25px;
+      width: 100%;
+    }
+    .MuiFilledInput-root {
+      border: 1px solid #e7e9ea;
+      border-radius: 10px 10px 0px 0px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #15a3a5;
+    }
+  }
+
+  .heading-divider {
+    background: #f79c30;
+    border-radius: 10px 0px 0px 10px;
+    width: 56px;
+    height: 5px;
+    position: relative;
+
+    &::before {
+      content: "";
+      background: var(--MedPurple);
+      border-radius: 0px 10px 10px 0px;
+      width: 6px;
+      height: 5px;
+      position: absolute;
+      right: -10px;
+    }
+  }
+
+  .role-sec {
+    margin-top: 30px;
+    .role-checkbox {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 20px;
+
+      .MuiIconButton-label {
+        color: var(--NSupText);
+      }
+
+      .MuiFormControlLabel-root {
+        .MuiTypography-body1 {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+        }
+
+        .Mui-checked {
+          ~ .MuiTypography-body1 {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .hideUserList {
+    display: none;
+  }
+  .showUserList {
+    display: block;
+  }
+
+}
+.mainChildDiv:after{
+  content: '';
+  height: 50%;
+  background: var(--MedPurple);
+  z-index: -1;
+  position: absolute;
+  left: -15px;
+  bottom: -50px;
+  right: -15px;
+  border: 15px var(--MedPurple) solid;
+  border-bottom: 50px var(--MedPurple) solid;
+  border-top: none;
+  display: flex;
+  border-radius: 16px;
+}
+
+
+/* Responsiveness */
+
+  @media (max-width: 576px) {
+    .mainChildDiv{
+      padding: 0 10px;
+      margin: 0 20px;
+      .admin_content {
+        padding: 0 10px;
+        margin-top: 10px;
+        
+        .admin_heading{
+          flex-direction: column;
+          align-items: flex-start;
+          .heading_buttons{
+            flex-direction: column;
+            gap: 10px;
+            
+            
+            .pri-btn-wrap{
+              
+              justify-content: space-between;
+            }
+            .btnClear{
+              font-size: .8rem;
+              padding: 5px 12px !important;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .tab_style{
+        button{
+          margin-right: 5px;
+          font-size: .6rem;
+          padding: 5px 10px;
+          min-width: fit-content;
+        }
+      }
+      .usercsc_accordian {
+        overflow-x: scroll;
+        .minHeight-60vh{
+          width: 350%;
+          min-height: 54vh;
+          .modelUserPic{
+            width: 200px;
+            right: 40px;
+          }
+        }
+      }
+    }
+  }
+
+/* Responsiveness */
+
+/*---------------table------------------*/
+.tabing_table {
+  .MuiDataGrid-columnHeaders {
+    .MuiDataGrid-columnHeaderTitle {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--NSupText);
+    }
+  }
+
+  .MuiDataGrid-virtualScrollerContent {
+    .MuiDataGrid-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+
+      &:nth-of-type(odd) {
+        background-color: var(--PBorderColor);
+      }
+
+      .MuiDataGrid-cellContent {
+        color: var(--NSupText);
+      }
+
+      .MuiBadge-badge {
+        width: 10px;
+        height: 10px;
+        background-color: var(--MedPurple);
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.filter {
+  background: var(--SupCloudy);
+  border-bottom: 2px solid var(--PBorderColor);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+.filterRight-sec{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+  .fiterText {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border: 1px solid rgba(217, 220, 221, 0.8);
+    border-radius: 10px;
+  }
+
+  .MuiInputBase-input {
+    max-width: 200px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .MuiFormControl-root {
+    margin: 0;
+    max-width: 200px;
+  }
+  
+}
+/*---------------end table------------------*/
+.gap-20{
+  gap:20px;
+  padding: 20px;
+  justify-content: flex-end;
+}

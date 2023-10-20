@@ -1,0 +1,11 @@
+{
+    "COMPARE_TEAMS": "Porównaj Wartości",
+    "SELECT_TEAMS_TO_COMPARE": "Wybierz dwa zespoły z poniższej listy, aby porównać ich wartości NAD",
+    "SELECT_TEAM": "Wybierz zespół",
+    "NO_RESULTS": "Brak dostępnych wyników do wyświetlenia. Aby wygenerować wykres, potrzebujemy dwóch zespołów zawierających przynajmniej jednego członka z wynikami testu BrainCore.",
+    "{{NUMBER_OF_TEAM_MEMBERS_WITH_RESULT}}/{{NUMBER_OF_TEAM_MEMBERS}} MEMBERS": "{{NUMBER_OF_TEAM_MEMBERS_WITH_RESULT}}/{{NUMBER_OF_TEAM_MEMBERS}} osób",
+    
+    "EDU_SELECT_TEAMS_TO_COMPARE": "Wybierz dwie klasy z poniższej listy, aby porównać ich wartości NAD",
+    "EDU_SELECT_TEAM": "Wybierz klasę",
+    "EDU_NO_RESULTS": "Brak dostępnych wyników do wyświetlenia. Aby wygenerować wykres, potrzebujemy dwóch klas zawierających przynajmniej jednego ucznia z wynikami testu BrainCore."
+}

@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: elia-stage-certificates
+  namespace: stage
+spec:
+  # Secret names are always required.
+  secretName: elia-stage-certificates
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  dnsNames:
+    - stage.elia.academy
+    - stage.database-interface.elia.academy
+    - stage.search-engine-interface.elia.academy
+  # Issuer references are always required.
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer

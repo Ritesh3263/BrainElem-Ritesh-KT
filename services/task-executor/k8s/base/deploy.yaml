@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elia-task-executor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elia-task-executor
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: elia-task-executor
+    spec:
+      containers:
+        - image: elia-task-executor
+          name: elia-task-executor
+          envFrom:
+            - configMapRef:
+                name: elia-task-executor
+            - secretRef:
+                name: elia-main-secret
+          resources: {}
+      restartPolicy: Always

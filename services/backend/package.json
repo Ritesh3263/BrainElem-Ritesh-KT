@@ -1,0 +1,60 @@
+{
+  "name": "elia-backend",
+  "version": "1.0.0",
+  "description": "ELiA backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --testEnvironment=node",
+    "start": "nodemon ./index.js -e html,js,css --ignore swagger/ --ignore public/"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "jwt",
+    "authentication",
+    "mongodb"
+  ],
+  "author": "bezkoder",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bson": "^4.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "extract-zip": "^2.0.1",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "moment-timezone": "^0.5.43",
+    "mongoosastic": "^4.6.0",
+    "mongoose": "^5.9.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.5.0",
+    "puppeteer": "^19.7.5",
+    "socket.io": "^4.4.1",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.1.1",
+    "eslint": "^7.20.0",
+    "eslint-plugin-jest": "^24.1.5",
+    "express-oas-generator": "^1.0.30",
+    "jest": "^29.5",
+    "mongoose-to-swagger": "^1.1.1",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.1",
+    "swagger-jsdoc": "^6.2.5"
+  },
+  "dependenciesComments": {
+    "bson": "For Swagger",
+    "express-oas-generator": "For Swagger",
+    "mongoose-to-swagger": "For Swagger",
+    "nodemon": "Restarts application when file are edited",
+    "jest": "Testing environment"
+  }
+}

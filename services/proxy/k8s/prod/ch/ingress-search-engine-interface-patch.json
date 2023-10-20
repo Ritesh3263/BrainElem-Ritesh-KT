@@ -1,0 +1,34 @@
+[
+  {
+    "op": "add",
+    "path": "/metadata/annotations/traefik.ingress.kubernetes.io~1router.tls",
+    "value": "true"
+  },
+  {
+    "op": "add",
+    "path": "/metadata/annotations/traefik.ingress.kubernetes.io~1router.middlewares",
+    "value": "prod-prod-elia-basic-auth-middleware@kubernetescrd"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/rules/0/host",
+    "value": "ch.search-engine-interface.elia.academy"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/rules/0/http/paths/0/backend/service/name",
+    "value": "prod-elia-search-engine-interface"
+  },
+  {
+    "op": "add",
+    "path": "/spec/tls",
+    "value": [
+      {
+        "secretName": "elia-prod-certificates",
+        "hosts": [
+          "ch.search-engine-interface.elia.academy"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,333 @@
+@import url("../../../scss/_colors.scss");
+
+.main_results {
+  .admin_heading {
+    
+    .heading_buttons {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      gap: 20px;
+
+      .uploadCSVbtn {
+        margin: 0;
+      }
+
+      .btnClear {
+        background-color: transparent;
+        color: #F79C30;
+        border: 2px solid #F79C30;
+        border-radius: 10px;
+        padding: 0 20px !important;
+        box-shadow: none;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .skillsBg {
+    background-color: var(--SupCloudy);
+    padding: 12px 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--NSIconBorder);
+    &:hover{
+      background-color: var(--MedPurple);
+      border-color: var(--MedPurple);
+      span{
+        color: var(--PWhite);
+      }
+    }
+    .dim-icon{
+      height: 35px; 
+      width: 35px; 
+      border: 1px solid var(--PBorderColor); 
+      border-radius: 50%; 
+      padding: 6px; 
+      background-color: var(--PWhite) ;
+    }
+  }
+
+  .card-bg {
+    // background: none;
+    // background-color: var(--SupCloudy) !important;
+    box-shadow: none;
+  }
+
+  .card-faq {
+    background-color: var(--MedPurple) !important;
+    padding: 8px 16px;
+
+    .faq_img {
+      width: 230px;
+    }
+  }
+
+  .bubble {
+    border-radius: 16px;
+  }
+
+  .bubble3 {
+    // background-color: var(--PWhite);
+    border-radius: 16px;
+    padding: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 8%;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-bottom-color: var(--SupCloudy);
+      border-top: 0;
+      margin-left: -13px;
+      margin-top: -18px;
+    }
+  }
+
+  .list-style-checkbox {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 8px;
+
+
+      display: block;
+      position: relative;
+      // padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+
+
+
+      input {
+        // width: 25px;
+        // height: 25px;
+        // border-radius: 50%;
+        // overflow: hidden;
+
+
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+
+      }
+
+      // input::after{
+      //   border-radius: 50%;
+      //   overflow: hidden;
+      // }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+      }
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      .checkmark:after {
+        left: 9px;
+        top: 3px;
+        width: 7px;
+        height: 16px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      input:checked~.checkmark {
+        accent-color: var(--MedPurple);
+        background-color: var(--MedPurple);
+        display: block;
+        border-radius: 8px;
+      }
+
+      input:checked~.checkmark::after {
+
+        display: block;
+      }
+    }
+  }
+
+  
+  .helful_img {
+    max-width: 100%;
+  }
+  @media (max-width: 600px) {
+    .img-mb-80{
+      width: 80%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .img-mb-80{
+      width: 100%;
+    }
+  }
+}
+// .qnad-badge{
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// }
+// .bar-chart-mb{
+//   margin-left: -4rem;
+// }
+.retake_action {
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+
+  .img_box {
+    margin-right: 25px;
+
+    @media (max-width: 600px) {
+      margin-right: 0px;
+      margin-bottom: 15px;
+    }
+
+    img {
+      height: 200px;
+
+      @media (max-width: 600px) {
+        height: 150px;
+      }
+    }
+  }
+}
+.date_dropdown{
+  .MuiSelect-iconOpen{
+    right: 18px !important;
+    top: calc(50% - 0.7em) !important;
+  }
+  .MuiSelect-select{
+    padding-top: 11px;
+    &:hover{
+      border-color: transparent;
+    }
+  }
+  .MuiSelect-icon{
+    top: calc(50% - 0.3em);
+  }
+}
+.openChoice_dialog {
+  .MuiDialog-paper{
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    @media (max-width:600px){
+      padding: 16px;
+    }
+  }
+}
+
+.recharts-tooltip-wrapper {
+  display: none,
+}
+
+.font-18-bold{
+  font-size: 18px;
+  font-weight: 800;
+  vertical-align: middle;
+}
+.etab_bar{
+  width: 100%;
+}
+// Responsiveness //
+@media (max-width: 600px) {
+  .bar-chart-mb{
+    width: 100% !important;
+    overflow-x: scroll;
+    margin-left: -4rem;
+  }
+  .main_results {
+    .admin_content {
+      .admin_heading {
+        margin-bottom: 10px;
+      }
+    }
+
+    // .content_tabing {
+    //   .tab_style {
+    //     .MuiTabs-flexContainer {
+    //       height: auto;
+    //       flex-wrap: wrap;
+    //       justify-content: space-around;
+    //       row-gap: 10px;
+
+    //       button {
+    //         padding: 0 5px;
+    //         margin: 0;
+    //         border-bottom: 1px solid var(--PBorderColor);
+    //         min-width: 150px;
+
+    //         &.Mui-selected {
+    //           font-weight: 700;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+
+    .card1_sec1 {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      row-gap: 10px;
+      align-items: center;
+
+      .result-select {
+        display: flex;
+      }
+
+      .color_info {
+        justify-content: flex-start;
+      }
+    }
+
+    .faq_sec {
+      flex-direction: column;
+      gap: 20px;
+
+      .faq_img {
+        width: 180px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .btn-mb-clm{
+    flex-direction: column;
+    button{
+      width: 100%;
+    }
+  }
+}

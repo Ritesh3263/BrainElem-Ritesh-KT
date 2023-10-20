@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: database-pv-volume
+spec:
+  hostPath:
+    path: "/mnt/data/prod/database"

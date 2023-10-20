@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elia-database-interface
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elia-database-interface
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+        - image: elia-database-interface
+          name: elia-database-interface
+          envFrom:
+            - configMapRef:
+                name: elia-database-interface
+            - secretRef:
+                name: elia-main-secret
+          resources: {}
+      restartPolicy: Always

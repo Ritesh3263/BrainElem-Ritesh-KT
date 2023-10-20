@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: elia-demo-certificates
+  namespace: demo
+spec:
+  # Secret names are always required.
+  secretName: elia-demo-certificates
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  dnsNames:
+    - results.brainelem.com
+    - demo.brainelem.com
+    - demo.database-interface.brainelem.com
+    - demo.search-engine-interface.brainelem.com
+  # Issuer references are always required.
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer

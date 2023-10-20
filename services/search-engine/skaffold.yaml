@@ -1,0 +1,99 @@
+apiVersion: skaffold/v2beta17
+kind: Config
+
+deploy:
+  kustomize:
+    paths:
+    - k8s/base
+
+profiles:
+  - name: local
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/local
+  - name: test
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/test
+  - name: dev
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/dev
+  - name: stage-evvo
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/stage-evvo
+  - name: local-dev-evvo
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/local-dev-evvo
+  - name: demo
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/demo
+  - name: stage
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/stage
+  - name: prod-ch
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/prod/ch
+  - name: prod-evvo
+    build:
+      artifacts:
+        - image: elia-search-engine
+      local:
+        push: true
+    deploy:
+      kustomize:
+        paths:
+          - k8s/prod/evvo        

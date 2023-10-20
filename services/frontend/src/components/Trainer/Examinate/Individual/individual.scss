@@ -1,0 +1,59 @@
+
+.questionCards{
+    display: block;
+    border: 1px solid var(--PBorderColor);
+    border-radius: 8px;
+}
+
+.gradeBox{
+    padding: .5rem;
+    margin: 1rem;
+    background-color: var(--SupCloudy);
+    border: 1px solid var(--PBorderColor);
+    border-radius: 4px;
+}
+
+.summaryDatePicker{
+    .MuiFilledInput-input{
+        padding-top: 15px;
+    }
+}
+
+// .iconBtnGreen:hover{
+//     background-color: var(--MedPurple);
+//     svg{
+//         fill: var(--PWhite) !important;
+//     }
+// }
+
+// .examSwitch{
+    // .MuiSwitch-track{
+    //     height: auto !important;
+    // }
+    // .MuiSwitch-thumb{
+    //     top: 0 !important;
+    //     left: 0 !important;
+    // }
+    // .MuiSwitch-switchBase.Mui-checked:hover .MuiTouchRipple-root{
+        // background: none !important;
+        // color: var(--MedPurple);
+    // }
+// }
+
+.MuiMenu-list{
+    .menu_list{
+        background: var(--PWhite);
+        
+        &:hover{
+            background-color: var(--MedPurple) !important;
+            span{
+                color: var(--PWhite) !important;
+            }
+            
+        }
+    }
+    // .menu_list:hover{
+    //     background-color: var(--MedPurple) !important;
+    //     color: var(--PWhite);   
+    // }
+}

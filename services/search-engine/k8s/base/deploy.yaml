@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elia-search-engine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elia-search-engine
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      volumes:
+        - name: search-engine-pv-storage
+          persistentVolumeClaim:
+            claimName: search-engine-pv-claim
+      containers:
+        - image: elia-search-engine
+          name: elia-search-engine
+          lifecycle: 
+            postStart:
+              exec:
+                command: ["chown" , "1000:1000" , "/usr/share/elasticsearch/data"]
+          volumeMounts:
+          - mountPath: "/usr/share/elasticsearch/data"
+            name: search-engine-pv-storage
+          envFrom:
+            - configMapRef:
+                name: elia-search-engine
+            - secretRef:
+                name: elia-main-secret
+          resources: {}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 9200
+            failureThreshold: 1
+            periodSeconds: 60
+          startupProbe:
+            httpGet:
+              path: /
+              port: 9200
+            failureThreshold: 30
+            periodSeconds: 15
+      restartPolicy: Always
+
+status: {}
